@@ -188,10 +188,8 @@ function App() {
                     {/* Square */}
                     <animated.div
                         className="Square"
-                        style={animContent} >
+                        style={animContent} />
 
-
-                    </animated.div>
                     {/* image */}
                     <animated.div className="image">
                         <animated.div className="text">
