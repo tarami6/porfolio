@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSpring, animated } from 'react-spring';
 import Typical from 'react-typical';
 import './App.css';
 import './assets/font-awesome/css/font-awesome.min.css';
-import logo from './assets/logo.png';
+
 import un from './assets/1.png';
 import deux from './assets/2.png';
 import trois from './assets/3.png';
@@ -14,8 +14,10 @@ import sept from './assets/7.png';
 import huite from './assets/8.png';
 import dix from './assets/10.png';
 
-function App() {
+import Logo from './components/logo'
+import SocialIcons from './components/socialIcons'
 
+function App() {
     // custum bgAnims for all background item
     const { bgAnim } = useSpring({
         from: { bgAnim: 0, anim: 100 },
@@ -163,27 +165,8 @@ function App() {
                 {/* Page content */}
                 <header className="App-header">
                     <nav>
-
-                        {/* logo */}
-                        <a href="#home">
-                            <div className="logo">
-                                <img src={logo} alt="logo" />
-                                <span>Rami Talisveiber</span>
-                            </div>
-                        </a>
-
-                        {/* socials icons */}
-                        <div className="nav-item">
-                            <a href="#facebook">
-                                <i className="fa fa-facebook" />
-                            </a>
-                            <a href="#facebook">
-                                <i className="fa fa-twitter" />
-                            </a>
-                            <a href="#facebook">
-                                <i className="fa fa-instagram" />
-                            </a>
-                        </div>
+                        <Logo/>
+                        <SocialIcons />
                     </nav>
 
                     {/* Square */}
@@ -209,8 +192,7 @@ function App() {
                                 ]}
                             />
                         </animated.div>
-                        <animated.img    src={deux} alt="Rami"
-                                      />
+                        <animated.img src={deux} alt="Rami" />
                     </animated.div>
                 </header>
             </div>
@@ -219,3 +201,14 @@ function App() {
 }
 
 export default App;
+
+
+//onlocalHost or heroku deploy change to this in package.json
+
+//"scripts": {
+//"start": "serve -s build",
+//"build": "react-scripts build",
+//"test": "react-scripts test",
+//"eject": "react-scripts eject",
+//"heroku-postbuild": "npm run build"
+//},
