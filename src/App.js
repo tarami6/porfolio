@@ -44,14 +44,15 @@ function App() {
     // Other animations that are not infinite
     const animContent = useSpring({
         from: {
-            transform: `translateY(500px)`,
+            transform: `scale(0)`,
             opacity: 0
         },
         to: {
-            transform: `translateY(0%)`,
+            transform: `scale(1)`,
             opacity: 1,
         },
-        config: { duration: 1000 },
+        config: { duration: 1000,  },
+        delay: 1000
     })
 
     // Setting of background images
@@ -188,10 +189,11 @@ function App() {
                     {/* Square */}
                     <animated.div
                         className="Square"
-                        style={animContent} />
+                        style={animContent}
+                         />
 
                     {/* image */}
-                    <animated.div className="image">
+                    <animated.div style={animContent} src={deux} className="image">
                         <animated.div className="text">
                             <h1>Hi, I'm Rami,</h1>
                             <Typical
@@ -207,8 +209,8 @@ function App() {
                                 ]}
                             />
                         </animated.div>
-                        <animated.img src={deux} alt="Rami"
-                                      style={animContent} />
+                        <animated.img    src={deux} alt="Rami"
+                                      />
                     </animated.div>
                 </header>
             </div>
