@@ -43,44 +43,44 @@
   position: absolute;
 }
 .un{
-  width: 30px;
+  width: 2%;
   left: 13%;
   bottom: 40%;
 }
 .trois{
-  width: 30px;
+  width: 2%;
   top: 30%;
   left: 18%;
 }
 .quatre{
-  width: 380px;
+  width: 31%;
   left: 10%;
   bottom: 10%;
 }
 .dix {
-  width: 160px;
+  width: 17%;
   left: 15%;
   bottom: 3%;
   z-index: 1;
 }
 .six{
-  width: 380px;
+  width: 30%;
   right: 10%;
   bottom: -30%;
 }
 .sept {
-  width: 100px;
+  width: 9%;
   right: 18%;
   bottom: 58%;
   z-index: 1;
 }
 .cinq {
-  width: 50px;
+  width: 4%;
   right: 10%;
   bottom: 40%;
 }
 .huite {
-  width: 40px;
+  width: 3%;
   right: 35%;
   top: 21%;
 }

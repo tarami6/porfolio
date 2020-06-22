@@ -6,7 +6,7 @@ import bg2 from "../../assets/images/bg-2.png";
 import vector from "../../assets/images/vector.png";
 import lock from "../../assets/images/lock.png";
 import { Grid, Box, Typography } from "@material-ui/core";
-import roboto from "fontsource-roboto";
+import "fontsource-roboto";
 import TabsComponent from "./tabs/tabComponent/TabsComponent";
 
 const useStyle = makeStyles(() => ({
@@ -20,26 +20,26 @@ const useStyle = makeStyles(() => ({
     overflow: "hidden",
   },
   bgLeft: {
-    width: "450px",
+    width: "36%",
     position: "absolute",
     left: "-10%",
   },
   bgRight: {
-    width: "450px",
+    width: "40%",
     position: "absolute",
-    right: "-0%",
-    bottom: "-5px",
+    right: "-2%",
+    bottom: "-1%",
   },
   lock: {
-    width: "240px",
+    width: "20%",
     position: "absolute",
-    top: "23%",
+    top: "21%",
     left: "2%",
   },
   vector: {
-    width: "420px",
+    width: "35%",
     position: "absolute",
-    right: "0%",
+    right: "-2%",
     bottom: "0%",
   },
   year: {

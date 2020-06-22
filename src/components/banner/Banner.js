@@ -11,8 +11,8 @@ const useStyle = makeStyles(() => ({
     position: "relative",
   },
   square: {
-    width: "570px",
-    height: "350px",
+    width: "50%",
+    height: "60%",
     background: "linear-gradient(0deg,#4c23ea, #eb3da1)",
     position: "absolute",
     bottom: "0",
@@ -21,7 +21,7 @@ const useStyle = makeStyles(() => ({
 
   block: {
     display: "flex",
-    width: "570px",
+    width: "50%",
     position: "absolute",
     justifyContent: "center",
     bottom: "0",
