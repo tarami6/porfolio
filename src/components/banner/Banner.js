@@ -12,7 +12,7 @@ const useStyle = makeStyles(() => ({
   },
   square: {
     width: "570px",
-    height: "370px",
+    height: "350px",
     background: "linear-gradient(0deg,#4c23ea, #eb3da1)",
     position: "absolute",
     bottom: "0",
@@ -66,7 +66,9 @@ const Banner = () => {
                 1000,
                 "Web Developer,",
                 1000,
-                "Freelancer.",
+                "Freelancer,",
+                1000,
+                "Tech Leader.",
                 2000,
               ]}
             />

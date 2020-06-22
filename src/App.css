@@ -26,7 +26,7 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
   background: linear-gradient(0deg,#eb3da1,#4c23ea);
 }
 
@@ -60,7 +60,7 @@
 .dix {
   width: 160px;
   left: 15%;
-  bottom: 8%;
+  bottom: 3%;
   z-index: 1;
 }
 .six{
@@ -71,7 +71,7 @@
 .sept {
   width: 100px;
   right: 18%;
-  bottom: 62%;
+  bottom: 58%;
   z-index: 1;
 }
 .cinq {
@@ -88,14 +88,16 @@
 .lines{
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  width: 90vw;
   height: 100%;
+  margin-left: 5vw;
+  z-index: 1;
   position: absolute;
 }
 .l1{
   width: 1px;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.178);
+  background-color: rgba(179, 179, 179, 0.178);
 }
 .l2{
   width: 1px;

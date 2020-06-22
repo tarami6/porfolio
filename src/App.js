@@ -14,6 +14,7 @@ import dix from "./assets/images/10.png";
 
 import NavBar from "./components/appBar/NavBar";
 import Banner from "./components/banner/Banner";
+import SecondScreen from "./components/secondScreen/SecondScreen";
 
 function App() {
   // custum bgAnims for all background item
@@ -40,7 +41,7 @@ function App() {
     config: { duration: 8000 },
     reset: true,
   });
- 
+
   // Setting of background images
   const bgImg = [
     {
@@ -177,8 +178,8 @@ function App() {
             <animated.div className="l2" style={lines}></animated.div>
           </div>
         </div>
-        {/* Page content */}
       </div>
+      <SecondScreen />
     </div>
   );
 }

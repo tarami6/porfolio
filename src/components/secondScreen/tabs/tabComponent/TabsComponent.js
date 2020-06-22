@@ -20,7 +20,8 @@ const AntTab = withStyles((theme) => ({
     color: "#888",
     "&:hover": {
       opacity: 1,
-      backgroundColor: "#d1d1d1",
+      backgroundColor: "#3210b2",
+      color: "white",
     },
     "&:focus": {
       color: "white",
