@@ -1,14 +1,23 @@
-import React from "react";
-import { AppBar, Toolbar, Grid } from "@material-ui/core";
+import { AppBar, Grid, Toolbar } from "@material-ui/core";
+
 import Logo from "./logo";
+import React from "react";
 import SocialIcons from "./socialIcons";
 
 const NavBar = () => {
   return (
     <div>
-      <AppBar position="absolute" color="transparent" elevation={0} >
+      <AppBar
+        position="fixed"
+        elevation={0}
+        style={{ background: "#5d25e2" }}
+      >
         <Toolbar>
-          <Grid container justify="center" alignItems="center">
+          <Grid
+            container
+            justify="center"
+            alignItems="center"
+          >
             <Grid
               container
               item

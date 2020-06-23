@@ -1,21 +1,22 @@
-import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import "fontsource-roboto";
 
+import { Box, Grid, Typography } from "@material-ui/core";
+
+import React from "react";
+import TabsComponent from "./tabs/tabComponent/TabsComponent";
 import bg1 from "../../assets/images/bg-1.png";
 import bg2 from "../../assets/images/bg-2.png";
-import vector from "../../assets/images/vector.png";
 import lock from "../../assets/images/lock.png";
-import { Grid, Box, Typography } from "@material-ui/core";
-import "fontsource-roboto";
-import TabsComponent from "./tabs/tabComponent/TabsComponent";
+import { makeStyles } from "@material-ui/core/styles";
+import vector from "../../assets/images/vector.png";
 
 const useStyle = makeStyles(() => ({
   root: {
     width: "100%",
-    height: "100vh",
+    height: "650px",
     fontFamily: "roboto",
     position: "relative",
-    paddingTop: "50px",
+    padding: "50px 15px 0 15px",
     backgroundColor: "#fefefe",
     overflow: "hidden",
   },
@@ -86,10 +87,11 @@ const SecondScreen = () => {
           Dooble
         </Typography>
 
-        <Box component="span" m={2}>
+        <Box component="span" m={2} style={{ zIndex: "10", color: "#212121" }}>
           <h1>Under confidality contract</h1>
         </Box>
-        <Grid container item xs={12} sm={8} style={{ zIndex: "10" }}>
+        <Grid container item xs={12} sm={10} lg={8}
+          style={{ zIndex: "10", marginTop: "1em" }}>
           <TabsComponent />
         </Grid>
       </Grid>
