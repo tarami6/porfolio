@@ -1,20 +1,21 @@
-import React from "react";
-import { useSpring, animated } from "react-spring";
 import "./App.css";
 import "./assets/font-awesome/css/font-awesome.min.css";
 
-import un from "./assets/images/1.png";
-import trois from "./assets/images/3.png";
-import quatre from "./assets/images/4.png";
-import cinq from "./assets/images/5.png";
-import six from "./assets/images/4.png";
-import sept from "./assets/images/7.png";
-import huite from "./assets/images/8.png";
-import dix from "./assets/images/10.png";
+import { animated, useSpring } from "react-spring";
 
-import NavBar from "./components/appBar/NavBar";
 import Banner from "./components/banner/Banner";
+import NavBar from "./components/appBar/NavBar";
+import React from "react";
 import SecondScreen from "./components/secondScreen/SecondScreen";
+import ThirdScreen from "./components/thirdScreen/ThirdScreen";
+import cinq from "./assets/images/5.png";
+import dix from "./assets/images/10.png";
+import huite from "./assets/images/8.png";
+import quatre from "./assets/images/4.png";
+import sept from "./assets/images/7.png";
+import six from "./assets/images/4.png";
+import trois from "./assets/images/3.png";
+import un from "./assets/images/1.png";
 
 function App() {
   // custum bgAnims for all background item
@@ -53,7 +54,7 @@ function App() {
             range: [0, 0.5, 1],
             output: [0, 15, 0],
           })
-          .interpolate((x) => `translate(0,${x}px)`),
+          .interpolate((x) => `translate(0,${x * -1}px)`),
       },
     },
     {
@@ -144,8 +145,8 @@ function App() {
 
   return (
     <div className="App">
+      <NavBar />
       <div className="container">
-        <NavBar />
         <Banner />
 
         <div className="background">
@@ -179,19 +180,12 @@ function App() {
           </div>
         </div>
       </div>
+      {/* Second screen */}
       <SecondScreen />
+      {/* Third screen */}
+      <ThirdScreen />
     </div>
   );
 }
 
 export default App;
-
-//onlocalHost or heroku deploy change to this in package.json
-
-//"scripts": {
-//"start": "serve -s build",
-//"build": "react-scripts build",
-//"test": "react-scripts test",
-//"eject": "react-scripts eject",
-//"heroku-postbuild": "npm run build"
-//},

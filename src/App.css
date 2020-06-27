@@ -16,9 +16,9 @@
 }
 .App {
   display: block;
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
+  width: 100%;
+  overflow-y: hidden;
+  box-sizing: border-box;
   font-family: 'Rozha One', serif;
 }
 .container{
