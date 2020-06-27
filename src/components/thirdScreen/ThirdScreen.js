@@ -13,7 +13,7 @@ import two from '../../assets/images/leftcorner.png'
 const useStyle = makeStyles(() => ({
   root: {
     width: '100%',
-    height: '650px',
+    height: '100vh',
     backgroundColor: '#f1f1f1',
     position: 'relative',
     fontFamily: 'roboto',

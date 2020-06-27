@@ -15,7 +15,7 @@ import vector from '../../assets/images/vector.png'
 const useStyle = makeStyles(() => ({
   root: {
     width: '100%',
-    height: '650px',
+    height: '100vh',
     fontFamily: 'roboto',
     position: 'relative',
     padding: '50px 15px 0 15px',
