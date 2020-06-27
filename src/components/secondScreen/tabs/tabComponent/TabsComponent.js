@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const TabsComponent = () => {
+const TabsComponent = ({style}) => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
 
