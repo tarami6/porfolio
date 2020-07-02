@@ -14,11 +14,12 @@ import vector from '../../assets/images/vector.png'
 
 const useStyle = makeStyles(() => ({
   root: {
-    width: '100%',
-    height: '650px',
+    width: '100vw',
+    height: '100vh',
     fontFamily: 'roboto',
     position: 'relative',
     padding: '50px 15px 0 15px',
+    marginTop: '80px',
     backgroundColor: '#fefefe',
     overflow: 'hidden',
   },
@@ -34,7 +35,7 @@ const useStyle = makeStyles(() => ({
     bottom: '-1%',
   },
   lock: {
-    width: '20%',
+    width: '18%',
     position: 'absolute',
     top: '21%',
     left: '2%',

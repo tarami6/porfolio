@@ -1,22 +1,25 @@
 import 'fontsource-roboto'
 
 import { Box, Typography } from '@material-ui/core'
+import { Waypoint } from 'react-waypoint'
+import { animated, useSpring } from 'react-spring'
 
 import React from 'react'
-import StepperContent from './stepper/StepperContent'
+import StepperContent from './stepper/StepperComponent'
 import { makeStyles } from '@material-ui/core/styles'
 import img from '../../assets/images/left-1.png'
 
 const useStyle = makeStyles(() => ({
   root: {
     width: '100%',
-    height: '650px',
+    height: '100vh',
     backgroundColor: '#f1f1f1',
     position: 'relative',
     fontFamily: 'roboto',
+    marginTop: '80px',
   },
   img: {
-    width: '8%',
+    width: '5%',
     position: 'absolute',
     top: '8%',
     left: '0',
@@ -32,10 +35,30 @@ const useStyle = makeStyles(() => ({
 }))
 const FourthScreen = () => {
   const classes = useStyle()
+  const [on, toogle] = React.useState(false)
+  const zoom = useSpring({
+    transform: on ? 'scale(1)' : 'scale(1.7)',
+    config: { duration: 1500 },
+  })
+
   return (
     <div className={classes.root}>
       <div className='background'>
-        <img src={img} alt='left' className={classes.img} />
+        <Waypoint
+          bottomOffset='20%'
+          onEnter={() => {
+            if (!on) toogle(true)
+          }}
+          onLeave={() => {
+            toogle(false)
+          }}
+        />
+        <animated.img
+          src={img}
+          alt='right'
+          className={classes.img}
+          style={zoom}
+        />
       </div>
       <div className={classes.content}>
         <div className={classes.header}>
@@ -46,7 +69,7 @@ const FourthScreen = () => {
             <h1>Side Entrepreneurship</h1>
           </Box>
         </div>
-        <StepperContent />
+        <StepperContent on={on} />
       </div>
     </div>
   )

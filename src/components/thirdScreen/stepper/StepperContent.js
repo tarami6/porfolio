@@ -32,7 +32,6 @@ const useStyle = makeStyles((theme) => ({
     position: 'relative',
     fontFamily: 'roboto',
   },
-  images: {},
   image1: {
     width: '29%',
     position: 'absolute',

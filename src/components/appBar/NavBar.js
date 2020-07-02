@@ -1,6 +1,6 @@
 import { AppBar, Grid, Toolbar } from "@material-ui/core";
 import { Waypoint } from 'react-waypoint'
-
+import '../../assets/font-awesome/css/font-awesome.min.css'
 import Logo from "./logo";
 import React from "react";
 import SocialIcons from "./socialIcons";

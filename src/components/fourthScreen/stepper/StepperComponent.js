@@ -2,11 +2,13 @@ import 'fontsource-roboto'
 
 import { Fab, Paper, Typography } from '@material-ui/core'
 
+import { animated, useSpring } from 'react-spring'
+
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import React from 'react'
-import image1 from '../../../assets/images/image-11.png'
-import image2 from '../../../assets/images/image-12.png'
+import image1 from '../../../assets/images/image-12.png'
+import image2 from '../../../assets/images/image-11.png'
 import { makeStyles } from '@material-ui/core/styles'
 
 const stepperItem = [
@@ -24,32 +26,34 @@ const stepperItem = [
 const useStyle = makeStyles((theme) => ({
   root: {},
   content: {
-    display: 'flex',
-    alignItems: 'flex-end',
-    justifyContent: 'space-between',
+    display: 'grid',
+    gridTemplateColumns: '5fr 5fr 2fr',
+    alignItems: 'end',
     position: 'relative',
     fontFamily: 'roboto',
   },
   image1: {
-    width: '23%',
-    position: 'relative',
-    left: '4%',
-  },
-  image2: {
     width: '28%',
     position: 'absolute',
-    left: '23%',
-    top: '2%',
+    left: '21%',
+    top: '-3%',
+  },
+  image2: {
+    width: '62%',
+    position: 'relative',
+    left: '1%',
   },
   paper: {
-    width: '50%',
-    padding: '3% 3% 3% 11%',
-    margin: '2% 13% 1% 0%',
+    width: '100%',
+    height: 'min-content',
+    padding: '3% 3% 3% 7%',
+    marginBottom: '2%',
+    boxSizing: 'border-box',
   },
   button: {
     display: 'flex',
     justifyContent: 'flex-end',
-    paddingRight: '13%',
+    paddingRight: '17%',
   },
   arrow: {
     margin: theme.spacing(1),
@@ -57,8 +61,14 @@ const useStyle = makeStyles((theme) => ({
   },
 }))
 
-const StepperContent = () => {
+const StepperContent = ({ on }) => {
   const classes = useStyle()
+
+  const { scale } = useSpring({
+    scale: on ? '1' : '0',
+    config: { duration: 1500 },
+  })
+
   const [activeStep, setActiveStep] = React.useState(0)
   const lastItem = stepperItem.length - 1
 
@@ -77,8 +87,34 @@ const StepperContent = () => {
   return (
     <div className={classes.root}>
       <div className={classes.content}>
-        <img src={image2} alt='image2' className={classes.image2} />
-        <img src={image1} alt='image1' className={classes.image1} />
+        <div className={classes.images}>
+          <animated.img
+            src={image2}
+            alt='image2'
+            className={classes.image2}
+            style={{
+              transform: scale
+                .interpolate({
+                  range: [0, 0.75, 1],
+                  output: [0.9, 1.1, 1],
+                })
+                .interpolate((x) => `scale(${x})`),
+            }}
+          />
+          <animated.img
+            src={image1}
+            alt='image1'
+            className={classes.image1}
+            style={{
+              transform: scale
+                .interpolate({
+                  range: [0, 0.75, 1],
+                  output: [1, 0.95, 1],
+                })
+                .interpolate((x) => `scale(${x})`),
+            }}
+          />
+        </div>
 
         <Paper square elevation={0} className={classes.paper}>
           <Typography variant='h4'>{stepperItem[activeStep].title}</Typography>

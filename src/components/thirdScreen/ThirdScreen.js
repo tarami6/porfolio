@@ -13,11 +13,12 @@ import two from '../../assets/images/leftcorner.png'
 const useStyle = makeStyles(() => ({
   root: {
     width: '100%',
-    height: '650px',
+    height: '100vh',
     backgroundColor: '#f1f1f1',
     position: 'relative',
     fontFamily: 'roboto',
     overflow: 'hidden',
+    marginTop: '80px',
   },
   one: {
     width: '15%',
@@ -44,7 +45,7 @@ const ThirdScreen = () => {
   const classes = useStyle()
   const [on, toogle] = useState(false)
   const zoom = useSpring({
-    transform: on ? 'scale(1)' : 'scale(1.7)',
+    transform: on ? 'scale(1)' : 'scale(1.4)',
     config: { duration: 1500 },
   })
 
