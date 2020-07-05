@@ -12,7 +12,6 @@ const useStyle = makeStyles(() => ({
     width: '100vw',
     height: '100vh',
     position: 'relative',
-    marginTop: '80px',
   },
   square: {
     width: '50vw',
@@ -54,35 +53,41 @@ const Banner = () => {
   })
 
   return (
-    <div className='container'>
-    <NavBar/>
-      <Background />
-      <Grid container justify='center'>
-        {/* Square */}
-        <animated.div className={classes.square} style={animContent} />
+    <div className={classes.root}>
+      <div className='container'>
+        <NavBar/>
+        <Background />
+        <Grid container justify='center'>
+          {/* Square */}
+          <animated.div className={classes.square} style={animContent} />
 
-        {/* image */}
-        <animated.div style={animContent} src={deux} className={classes.block}>
-          <animated.div className='text'>
-            <h1>Hi, I'm Rami,</h1>
-            <Typical
-              loop={Infinity}
-              wrapper='span'
-              steps={[
-                'UI/UX Designer,',
-                1000,
-                'Web Developer,',
-                1000,
-                'Freelancer,',
-                1000,
-                'Tech Leader.',
-                2000,
-              ]}
-            />
+          {/* image */}
+          <animated.div
+            style={animContent}
+            src={deux}
+            className={classes.block}
+          >
+            <animated.div className='text'>
+              <h1>Hi, I'm Rami,</h1>
+              <Typical
+                loop={Infinity}
+                wrapper='span'
+                steps={[
+                  'UI/UX Designer,',
+                  1000,
+                  'Web Developer,',
+                  1000,
+                  'Freelancer,',
+                  1000,
+                  'Tech Leader.',
+                  2000,
+                ]}
+              />
+            </animated.div>
+            <animated.img src={deux} alt='Rami' className={classes.image} />
           </animated.div>
-          <animated.img src={deux} alt='Rami' className={classes.image} />
-        </animated.div>
-      </Grid>
+        </Grid>
+      </div>
     </div>
   )
 }

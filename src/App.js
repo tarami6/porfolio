@@ -1,10 +1,10 @@
 import './App.css'
 import Banner from './components/banner/Banner'
-import NavBar from './components/appBar/NavBar'
 import React from 'react'
 import SecondScreen from './components/secondScreen/SecondScreen'
 import ThirdScreen from './components/thirdScreen/ThirdScreen'
 import FourthScreen from './components/fourthScreen/FourthScreen'
+import FifthScreen from './components/fifthScreen/FifthScreen'
 
 function App() {
   return (
@@ -20,6 +20,9 @@ function App() {
       </div>
       <div>
         <ThirdScreen />
+      </div>
+      <div>
+        <FifthScreen />
       </div>
     </div>
   )
