@@ -19,11 +19,12 @@
     "react-waypoint": "^9.0.3",
     "serve": "^11.3.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
+   "scripts": {
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
