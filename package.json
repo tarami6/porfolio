@@ -19,7 +19,7 @@
     "react-waypoint": "^9.0.3",
     "serve": "^11.3.2"
   },
-   "scripts": {
+  "scripts": {
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
