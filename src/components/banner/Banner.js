@@ -12,6 +12,7 @@ const useStyle = makeStyles(() => ({
     width: '100vw',
     height: '100vh',
     position: 'relative',
+    overflow: 'hidden'
   },
   square: {
     width: '50vw',

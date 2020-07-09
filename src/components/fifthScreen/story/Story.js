@@ -8,6 +8,7 @@ const useStyle = makeStyles(() => ({
     backgroundColor: 'white',
     overflowY: 'auto',
     padding: '40px',
+    fontSize: '1.5vw'
   },
 }))
 const Story = () => {
