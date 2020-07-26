@@ -17,6 +17,7 @@
   display: block;
   width: 100%;
   height: 100vh;
+  position: fixed;
   box-sizing: border-box;
   font-family: 'Rozha One', serif;
   scroll-snap-type: y proximity;
@@ -32,7 +33,6 @@
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
-
 
 .container {
   display: block;

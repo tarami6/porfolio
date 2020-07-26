@@ -8,9 +8,9 @@ const AnTabs = withStyles({
     flex: 1,
   },
   indicator: {
-    backgroundColor: "#3210BD",
+    backgroundColor: '#3210BD',
   },
-})(Tabs);
+})(Tabs)
 
 const AntTab = withStyles((theme) => ({
   root: {
@@ -45,11 +45,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#e0e0e0',
   },
   paper: {
-    height: '30vh',
+    height: '25vh',
     overflow: 'hidden',
   },
   tabpanel: {
-    fontSize: '1.7vh'
+    fontSize: '16px',
   },
 }))
 

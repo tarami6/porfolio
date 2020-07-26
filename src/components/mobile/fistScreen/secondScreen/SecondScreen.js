@@ -11,11 +11,10 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyle = makeStyles(() => ({
   root: {
     width: '100%',
-    height: '100%',
+    height: '80%',
     fontFamily: 'roboto',
     position: 'relative',
-    padding: '20px 15px',
-    backgroundColor: '#fefefe',
+    padding: '10px 15px',
   },
   year: {
     color: '#eb3da1',

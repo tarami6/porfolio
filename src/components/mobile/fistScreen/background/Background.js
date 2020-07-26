@@ -63,9 +63,9 @@ function Background() {
           .interpolate((x) => `translate(0,${x}px)`),
         display: 'block',
         position: 'absolute',
-        width: '60vw',
-        left: '-25%',
-        bottom: '30%',
+        width: '40vh',
+        left: '-25vh',
+        bottom: '7vh',
       },
     },
     {

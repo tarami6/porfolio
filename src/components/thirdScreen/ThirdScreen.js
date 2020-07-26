@@ -60,7 +60,7 @@ const ThirdScreen = () => {
           onLeave={() => {
             toogle(false)
           }}
-        /> 
+        />
         <animated.img
           src={one}
           alt='right'

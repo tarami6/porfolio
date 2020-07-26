@@ -7,24 +7,28 @@ import { Grid } from '@material-ui/core'
 import Background from './background/Background'
 import NavBar from './appBar/NavBar'
 import SecondScreen from './secondScreen/SecondScreen'
+import '../../../assets/fonts/RozhaOne-Regular.ttf'
 
 const useStyle = makeStyles(() => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
     width: '100vw',
     height: '100vh',
-    overflow: 'hidden',
     position: 'relative',
   },
-  wrapper: {
+  banner: {
     width: '100%',
-    height: '50%',
+    height: '45%',
     backgroundColor: 'linear-gradient(0deg, #eb3da1, #4c23ea)',
-    position: 'absolute',
-    top: 0,
+    position: 'relative',
     overflow: 'hidden',
+  },
+  tabContent: {
+    width: '100%',
+    height: '55%',
+    background: '#fafafa',
+    position: 'relative',
   },
   square: {
     width: '80%',
@@ -46,13 +50,31 @@ const useStyle = makeStyles(() => ({
     color: 'white',
   },
   image: {
-    width: '95%',
+    width: '40vh',
   },
-  tab: {
+  text: {
+    display: 'flex',
     width: '100%',
-    height: '100%',
+    height: '12vh',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-around',
     position: 'absolute',
-    top: '50%',
+    right: 'calc(50% - 90px)',
+    left: 0,
+    bottom: 0,
+    zIndex: '100',
+    background: 'linear-gradient(0deg, #4c23ea, #4b23ea77, transparent)',
+  },
+  h1: {
+    fontSize: '4vh',
+    fontWeight: '400',
+    margin: 0,
+    height: '4vw',
+  },
+  span: {
+    fontSize: '2.2vh',
+    fontFamily: 'Poppins',
   },
 }))
 
@@ -73,7 +95,7 @@ const FirstMobile = () => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.wrapper}>
+      <div className={classes.banner}>
         <NavBar />
         <Background />
         <Grid container justify='center'>
@@ -86,9 +108,10 @@ const FirstMobile = () => {
             src={deux}
             className={classes.block}
           >
-            <animated.div className='text'>
+            <animated.div className={classes.text}>
               <h1 className={classes.h1}>Hi, I'm Rami,</h1>
               <Typical
+                className={classes.span}
                 loop={Infinity}
                 wrapper='span'
                 steps={[
@@ -107,7 +130,7 @@ const FirstMobile = () => {
           </animated.div>
         </Grid>
       </div>
-      <div className={classes.tab}>
+      <div className={classes.tabContent}>
         <SecondScreen />
       </div>
     </div>
