@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import { Box, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Waypoint } from 'react-waypoint'
-import { animated, useSpring } from 'react-spring'
 
 import StepperContent from './stepper/StepperContent'
 import one from '../../../assets/images/Bitmap.png'
@@ -17,13 +16,13 @@ const useStyle = makeStyles(() => ({
     fontFamily: 'roboto',
     overflow: 'hidden',
     position: 'relative',
-    paddingTop: '20px',
+    paddingTop: '50px',
   },
   one: {
     width: '25%',
     position: 'absolute',
-    top: 0,
-    lef: 0,
+    top: '2%',
+    left: '-20px',
     zIndex: '1',
   },
   two: {
@@ -33,29 +32,33 @@ const useStyle = makeStyles(() => ({
     right: '0',
     zIndex: '1',
   },
+  container: {
+    height: '100%',
+    background: '#f1f1f1',
+  },
   content: {
-    height: '100vh',
-    padding: '10px 2em',
+    height: '80vh',
+    padding: '10px 1em',
     marginTop: '50px',
-    backgroundColor: '#f1f1f1',
     position: 'absolute',
     top: 0,
     boxSizing: 'border-box',
   },
   header: {
     display: 'flex',
+    height: '15%',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: '1em',
+    padding: '1vh',
+  },
+  stepper: {
+    display: 'block',
+    height: '85%',
   },
 }))
 const ThirdMobile = () => {
   const classes = useStyle()
   const [on, toogle] = useState(false)
-  const zoom = useSpring({
-    transform: on ? 'scale(1)' : 'scale(1.4)',
-    config: { duration: 1500 },
-  })
 
   return (
     <div className={classes.root}>
@@ -69,32 +72,26 @@ const ThirdMobile = () => {
             toogle(false)
           }}
         />
-        <animated.img
-          src={one}
-          alt='right'
-          className={classes.one}
-          style={zoom}
-        />
-        <animated.img
-          src={two}
-          alt='left'
-          className={classes.two}
-          style={zoom}
-        />
+        <img src={one} alt='left' className={classes.one} />
+        <img src={two} alt='right' className={classes.two} />
       </div>
-      <div className={classes.content}>
-        <div className={classes.header}>
-          <Typography variant='h6' style={{ color: '#666', fontSize: '2vh' }}>
-            E-Commerce
-          </Typography>
-          <Box
-            component='span'
-            style={{ zIndex: '10', color: '#212121', fontSize: '2vh' }}
-          >
-            <h3>Side Entrepreneurship</h3>
-          </Box>
+      <div className={classes.container}>
+        <div className={classes.content}>
+          <div className={classes.header}>
+            <Typography variant='h6' style={{ color: '#666', fontSize: '5vw' }}>
+              E-Commerce
+            </Typography>
+            <Box
+              component='span'
+              style={{ zIndex: '10', color: '#212121', fontSize: '5vw' }}
+            >
+              <h3>Side Entrepreneurship</h3>
+            </Box>
+          </div>
+          <div className={classes.stepper}>
+            <StepperContent on={on} />
+          </div>
         </div>
-        <StepperContent on={on} />
       </div>
     </div>
   )

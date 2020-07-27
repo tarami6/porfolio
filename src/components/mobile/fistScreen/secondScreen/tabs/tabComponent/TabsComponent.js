@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-import { Paper, Tab, Tabs, Typography } from "@material-ui/core";
-import TabPanel from "../tabPanel/TabPanel";
+import React, { useState } from 'react'
+import { makeStyles, withStyles } from '@material-ui/core/styles'
+import { Paper, Tab, Tabs, Typography } from '@material-ui/core'
+import TabPanel from '../tabPanel/TabPanel'
 
 const AnTabs = withStyles({
   root: {
@@ -54,12 +54,12 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const TabsComponent = () => {
-  const classes = useStyles();
-  const [value, setValue] = useState(0);
+  const classes = useStyles()
+  const [value, setValue] = useState(0)
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+    setValue(newValue)
+  }
   return (
     <Paper elevation={4} className={classes.paper}>
       <div position='static' className={classes.appBar}>
@@ -78,8 +78,7 @@ const TabsComponent = () => {
         <Typography className={classes.tabpanel}>
           Lorem Ipsum is symply dummy text of printing and typeseting industry.
           Lorem Ipsum has been the industry's standard dummy text ever since the
-          1500s, when an unknown printer took a gallery of type and scanmbled it
-          to make a type specimen book.
+          1500s.
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={1}>
@@ -100,6 +99,6 @@ const TabsComponent = () => {
       </TabPanel>
     </Paper>
   )
-};
+}
 
-export default TabsComponent;
+export default TabsComponent
