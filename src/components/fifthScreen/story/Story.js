@@ -7,7 +7,6 @@ const useStyle = makeStyles(() => ({
     height: '100%',
     backgroundColor: 'white',
     overflowY: 'auto',
-    marginTop: '15vh',
     padding: '40px',
     fontSize: '1.5vw',
   },
