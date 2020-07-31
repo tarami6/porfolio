@@ -51,6 +51,7 @@ const useStyle = makeStyles((theme) => ({
   },
   peperContent: {
     height: '43%',
+    position: 'relative',
   },
   paper: {
     width: '100%',
@@ -130,7 +131,7 @@ const StepperContent = ({ on }) => {
           <Typography variant='h6'>{stepperItem[activeStep].title}</Typography>
           <Typography
             style={{
-              fontSize: '5vw',
+              fontSize: '4vw',
             }}
           >
             {stepperItem[activeStep].text}

@@ -50,7 +50,8 @@ const useStyle = makeStyles(() => ({
     color: 'white',
   },
   image: {
-    width: '40vh',
+    width: '80%',
+    height: '80%'
   },
   text: {
     display: 'flex',
