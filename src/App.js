@@ -18,7 +18,7 @@ function App() {
 
   if (screen < 500) {
     return (
-      <div className='App'>
+      <div className='AppMobile'>
         <div>
           <FirstMobile />
         </div>
