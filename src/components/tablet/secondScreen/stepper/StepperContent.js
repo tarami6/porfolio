@@ -33,7 +33,7 @@ const useStyle = makeStyles((theme) => ({
   },
   images: {
     display: 'block',
-    height: '42%',
+    height: '45%',
     position: 'relative',
   },
   image1: {
@@ -46,12 +46,11 @@ const useStyle = makeStyles((theme) => ({
   image2: {
     height: '95%',
     position: 'relative',
-    left: '7%',
+    left: '13%',
     zIndex: '3',
   },
   peperContent: {
-    height: '43%',
-    position: 'relative',
+    height: '40%',
   },
   paper: {
     width: '100%',
@@ -65,7 +64,7 @@ const useStyle = makeStyles((theme) => ({
     height: '15%',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   arrow: {
     margin: theme.spacing(1),
@@ -128,7 +127,7 @@ const StepperContent = ({ on }) => {
       </div>
       <div className={classes.peperContent}>
         <Paper square elevation={0} className={classes.paper}>
-          <Typography variant='h6'>{stepperItem[activeStep].title}</Typography>
+          <Typography variant='h3'>{stepperItem[activeStep].title}</Typography>
           <Typography
             style={{
               fontSize: '4vw',

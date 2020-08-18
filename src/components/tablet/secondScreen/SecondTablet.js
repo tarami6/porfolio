@@ -51,7 +51,7 @@ const useStyle = makeStyles(() => ({
     height: '85%',
   },
 }))
-const SeconMobile = () => {
+const SecondTablet = () => {
   const classes = useStyle()
   const [on, toogle] = useState(false)
 
@@ -90,4 +90,4 @@ const SeconMobile = () => {
   )
 }
 
-export default SeconMobile
+export default SecondTablet

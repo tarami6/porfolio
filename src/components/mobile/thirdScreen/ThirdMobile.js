@@ -49,7 +49,6 @@ const useStyle = makeStyles(() => ({
     height: '15%',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: '1vh',
   },
   stepper: {
     display: 'block',

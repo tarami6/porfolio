@@ -54,7 +54,7 @@ const useStyle = makeStyles((theme) => ({
   },
   paper: {
     width: '100%',
-    height: 'min-content',
+    height: '100%',
     padding: '3% 3% 3% 7%',
     boxSizing: 'border-box',
     zIndex: '2',
@@ -63,6 +63,7 @@ const useStyle = makeStyles((theme) => ({
     height: '15%',
     display: 'flex',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   arrow: {
     margin: theme.spacing(1),
@@ -128,7 +129,7 @@ const StepperContent = ({ on }) => {
           <Typography variant='h6'>{stepperItem[activeStep].title}</Typography>
           <Typography
             style={{
-              fontSize: '5vw',
+              fontSize: '4vw',
             }}
           >
             {stepperItem[activeStep].text}

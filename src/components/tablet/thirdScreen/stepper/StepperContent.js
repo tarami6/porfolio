@@ -7,8 +7,8 @@ import { animated, useSpring } from 'react-spring'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import React from 'react'
-import image1 from '../../../../assets/images/image-12.png'
-import image2 from '../../../../assets/images/image-11.png'
+import image1 from '../../../../assets/images/image-1.png'
+import image2 from '../../../../assets/images/image-2.png'
 import { makeStyles } from '@material-ui/core/styles'
 
 const stepperItem = [
@@ -33,7 +33,7 @@ const useStyle = makeStyles((theme) => ({
   },
   images: {
     display: 'block',
-    height: '42%',
+    height: '45%',
     position: 'relative',
   },
   image1: {
@@ -46,20 +46,19 @@ const useStyle = makeStyles((theme) => ({
   image2: {
     height: '95%',
     position: 'relative',
-    left: '7%',
+    left: '15%',
     zIndex: '3',
   },
   peperContent: {
-    height: '43%',
-    position: 'relative',
+    height: '40%',
+    padding: '0 4%',
+    zIndex: '4',
   },
   paper: {
     width: '100%',
     height: '100%',
     padding: '3% 3% 3% 7%',
     boxSizing: 'border-box',
-    background: 'transparent',
-    zIndex: '2',
   },
   button: {
     height: '15%',
@@ -128,7 +127,7 @@ const StepperContent = ({ on }) => {
       </div>
       <div className={classes.peperContent}>
         <Paper square elevation={0} className={classes.paper}>
-          <Typography variant='h6'>{stepperItem[activeStep].title}</Typography>
+          <Typography variant='h3'>{stepperItem[activeStep].title}</Typography>
           <Typography
             style={{
               fontSize: '4vw',
