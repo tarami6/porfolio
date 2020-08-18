@@ -9,6 +9,7 @@ import StepperContent from './stepper/StepperComponent'
 import { makeStyles } from '@material-ui/core/styles'
 import img from '../../assets/images/left-1.png'
 
+
 const useStyle = makeStyles(() => ({
   root: {
     width: '100%',

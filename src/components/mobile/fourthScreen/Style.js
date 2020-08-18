@@ -3,30 +3,31 @@ import { makeStyles } from '@material-ui/core/styles'
 const Style = makeStyles(() => ({
   root: {
     width: '100%',
-    height: '100%',
+    height: '100vh',
     position: 'relative',
     lineHeight: '1.6',
     fontFamily: 'roboto',
+    background: 'red',
   },
   left: {
     width: '20%',
     height: 'auto',
     position: 'absolute',
     left: '0',
-    top: '40%',
+    top: '25%',
   },
   right: {
     width: '7%',
     height: 'auto',
     position: 'absolute',
     right: '0',
-    top: '40%',
+    top: '25%',
   },
   fix4u: {
     width: '60%',
     position: 'absolute',
     left: '24%',
-    top: '40%',
+    top: '25%',
   },
   container: {
     display: 'block',

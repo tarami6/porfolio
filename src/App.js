@@ -1,35 +1,67 @@
+import React, { Suspense } from 'react'
 import './App.css'
-import Banner from './components/banner/Banner'
-import React from 'react'
-import SecondScreen from './components/secondScreen/SecondScreen'
-import ThirdScreen from './components/thirdScreen/ThirdScreen'
-import FourthScreen from './components/fourthScreen/FourthScreen'
-import FifthScreen from './components/fifthScreen/FifthScreen'
-import FirstMobile from './components/mobile/firstScreen/FirstMobile'
-import SecondMobile from './components/mobile/secondScreen/SecondMobile'
-import ThirdMobile from './components/mobile/thirdScreen/ThirdMobile'
-import FourthMobile from './components/mobile/fourthScreen/FourthMobile'
-import SecondTablet from './components/tablet/secondScreen/SecondTablet'
-import ThirdTablet from './components/tablet/thirdScreen/ThirdTablet'
-import FourthTablet from './components/tablet/fourthScreen/FourthTablet'
+import SuspenseComp from './components/SuspenseComp'
+
+const Banner = React.lazy(() => import('./components/banner/Banner'))
+const SecondScreen = React.lazy(() =>
+  import('./components/secondScreen/SecondScreen')
+)
+const ThirdScreen = React.lazy(() =>
+  import('./components/thirdScreen/ThirdScreen')
+)
+const FourthScreen = React.lazy(() =>
+  import('./components/fourthScreen/FourthScreen')
+)
+const FifthScreen = React.lazy(() =>
+  import('./components/fifthScreen/FifthScreen')
+)
+const FirstMobile = React.lazy(() =>
+  import('./components/mobile/firstScreen/FirstMobile')
+)
+const SecondMobile = React.lazy(() =>
+  import('./components/mobile/secondScreen/SecondMobile')
+)
+const ThirdMobile = React.lazy(() =>
+  import('./components/mobile/thirdScreen/ThirdMobile')
+)
+const FourthMobile = React.lazy(() =>
+  import('./components/mobile/fourthScreen/FourthMobile')
+)
+const SecondTablet = React.lazy(() =>
+  import('./components/tablet/secondScreen/SecondTablet')
+)
+const ThirdTablet = React.lazy(() =>
+  import('./components/tablet/thirdScreen/ThirdTablet')
+)
+const FourthTablet = React.lazy(() =>
+  import('./components/tablet/fourthScreen/FourthTablet')
+)
 
 function App() {
   const screen = window.innerWidth
 
   if (screen < 500) {
     return (
-      <div className='App'>
+      <div className='AppMobile'>
         <div>
-          <FirstMobile />
+          <Suspense fallback={<SuspenseComp />}>
+            <FirstMobile />
+          </Suspense>
         </div>
         <div>
-          <SecondMobile />
+          <Suspense fallback={<SuspenseComp />}>
+            <SecondMobile />
+          </Suspense>
         </div>
         <div>
-          <ThirdMobile />
+          <Suspense fallback={<SuspenseComp />}>
+            <ThirdMobile />
+          </Suspense>
         </div>
         <div>
-          <FourthMobile />
+          <Suspense fallback={<SuspenseComp />}>
+            <FourthMobile />
+          </Suspense>
         </div>
       </div>
     )
@@ -37,19 +69,29 @@ function App() {
     return (
       <div className='App'>
         <div>
-          <Banner />
+          <Suspense fallback={<SuspenseComp />}>
+            <Banner />
+          </Suspense>
         </div>
         <div>
-          <SecondScreen />
+          <Suspense fallback={<SuspenseComp />}>
+            <SecondScreen />
+          </Suspense>
         </div>
         <div>
-          <FourthScreen />
+          <Suspense fallback={<SuspenseComp />}>
+            <FourthScreen />
+          </Suspense>
         </div>
         <div>
-          <ThirdScreen />
+          <Suspense fallback={<SuspenseComp />}>
+            <ThirdScreen />
+          </Suspense>
         </div>
         <div>
-          <FifthScreen />
+          <Suspense fallback={<SuspenseComp />}>
+            <FifthScreen />
+          </Suspense>
         </div>
       </div>
     )
@@ -57,16 +99,24 @@ function App() {
     return (
       <div className='App'>
         <div>
-          <FirstMobile />
+          <Suspense fallback={<SuspenseComp />}>
+            <FirstMobile />
+          </Suspense>
         </div>
         <div>
-          <SecondTablet />
+          <Suspense fallback={<SuspenseComp />}>
+            <SecondTablet />
+          </Suspense>
         </div>
         <div>
-          <ThirdTablet />
+          <Suspense fallback={<SuspenseComp />}>
+            <ThirdTablet />
+          </Suspense>
         </div>
         <div>
-          <FourthTablet />
+          <Suspense fallback={<SuspenseComp />}>
+            <FourthTablet />
+          </Suspense>
         </div>
       </div>
     )
