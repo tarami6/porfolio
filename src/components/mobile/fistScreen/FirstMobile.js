@@ -1,44 +1,84 @@
 import React from 'react'
-import deux from '../../assets/images/2.png'
+import deux from '../../../assets/images/2.png'
 import Typical from 'react-typical'
 import { useSpring, animated } from 'react-spring'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid } from '@material-ui/core'
 import Background from './background/Background'
-import NavBar from '../appBar/NavBar'
+import NavBar from './appBar/NavBar'
+import SecondScreen from './secondScreen/SecondScreen'
+import '../../../assets/fonts/RozhaOne-Regular.ttf'
 
 const useStyle = makeStyles(() => ({
   root: {
+    display: 'flex',
+    flexDirection: 'column',
     width: '100vw',
     height: '100vh',
     position: 'relative',
-    overflow: 'hidden'
+  },
+  banner: {
+    width: '100%',
+    height: '45%',
+    backgroundColor: 'linear-gradient(0deg, #eb3da1, #4c23ea)',
+    position: 'relative',
+    overflow: 'hidden',
+  },
+  tabContent: {
+    width: '100%',
+    height: '55%',
+    background: '#fafafa',
+    position: 'relative',
   },
   square: {
-    width: '50vw',
-    height: '60%',
+    width: '80%',
+    height: '55%',
     background: 'linear-gradient(0deg,#4c23ea, #eb3da1)',
     position: 'absolute',
-    boxShadow: '-10px 8px 15px rgba(0,0,0,0.3), 10px 8px 15px rgba(0,0,0,0.3)',
+    boxShadow: '0 15px 18px 10px rgba(0,0,0,0.4)',
     bottom: '0',
-    zIndex: '1',
   },
 
   block: {
     display: 'flex',
-    width: '50vw',
+    width: '80%',
     position: 'absolute',
     justifyContent: 'center',
     bottom: '0',
     zIndex: '2',
+    overflowX: 'hidden',
     color: 'white',
   },
   image: {
-    width: '90%',
+    width: '40vh',
+  },
+  text: {
+    display: 'flex',
+    width: '100%',
+    height: '12vh',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    position: 'absolute',
+    right: 'calc(50% - 90px)',
+    left: 0,
+    bottom: 0,
+    zIndex: '100',
+    background: 'linear-gradient(0deg, #4c23ea, #4b23ea77, transparent)',
+  },
+  h1: {
+    fontSize: '4vh',
+    fontWeight: '400',
+    margin: 0,
+    height: '4vw',
+  },
+  span: {
+    fontSize: '2.2vh',
+    fontFamily: 'Poppins',
   },
 }))
 
-const Banner = () => {
+const FirstMobile = () => {
   const classes = useStyle()
   const animContent = useSpring({
     from: {
@@ -55,8 +95,8 @@ const Banner = () => {
 
   return (
     <div className={classes.root}>
-      <div className='container'>
-        <NavBar/>
+      <div className={classes.banner}>
+        <NavBar />
         <Background />
         <Grid container justify='center'>
           {/* Square */}
@@ -68,9 +108,10 @@ const Banner = () => {
             src={deux}
             className={classes.block}
           >
-            <animated.div className='text'>
-              <h1>Hi, I'm Rami,</h1>
+            <animated.div className={classes.text}>
+              <h1 className={classes.h1}>Hi, I'm Rami,</h1>
               <Typical
+                className={classes.span}
                 loop={Infinity}
                 wrapper='span'
                 steps={[
@@ -89,8 +130,11 @@ const Banner = () => {
           </animated.div>
         </Grid>
       </div>
+      <div className={classes.tabContent}>
+        <SecondScreen />
+      </div>
     </div>
   )
 }
 
-export default Banner
+export default FirstMobile

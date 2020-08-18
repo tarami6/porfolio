@@ -1,18 +1,7 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/styles'
-
-const useStyle = makeStyles(() => ({
-  root: {
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'white',
-    overflowY: 'auto',
-    padding: '40px',
-    fontSize: '1.5vw',
-  },
-}))
+import Style from './Style'
 const Story = () => {
-  const classes = useStyle()
+  const classes = Style()
   return (
     <div className={classes.root}>
       <p>
