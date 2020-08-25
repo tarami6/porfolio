@@ -1,16 +1,18 @@
 import 'fontsource-roboto'
 import React, { useState } from 'react'
 
-import { Box, Grid, Typography } from '@material-ui/core'
+import { Box, Grid, Typography, makeStyles } from '@material-ui/core'
 import { Waypoint } from 'react-waypoint'
 import { animated, useSpring } from 'react-spring'
 
-import TabsComponent from './tabs/tabComponent/TabsComponent'
-import bg1 from '../../assets/images/bg-1.png'
-import bg2 from '../../assets/images/bg-2.png'
-import lock from '../../assets/images/lock.png'
-import { makeStyles } from '@material-ui/core/styles'
-import vector from '../../assets/images/vector.png'
+import TabsComponent from '../../components/tabs/tabComponent'
+import amdocsLogo from '../../assets/images/amdocsLogo.png'
+import amdocsOptimaLogo from '../../assets/images/amdocsOptimaLogo.png'
+
+import {Amdocs} from "../../assets/data/data"
+
+
+
 
 const useStyle = makeStyles(() => ({
   root: {
@@ -65,7 +67,7 @@ const useStyle = makeStyles(() => ({
   },
 }))
 
-const SecondScreen = () => {
+const AmdocsScreen = () => {
   const classes = useStyle()
   const [on, toogle] = useState(false)
   const zoom = useSpring({
@@ -89,16 +91,14 @@ const SecondScreen = () => {
           toogle(false)
         }}
       />
-      <img src={bg1} alt='bg1' className={classes.bgLeft} />
       <animated.img
-        src={lock}
+        src={amdocsLogo}
         alt='lock'
         className={classes.lock}
         style={zoom}
       />
-      <animated.img src={bg2} alt='bg2' className={classes.bgRight} />
       <animated.img
-        src={vector}
+        src={amdocsOptimaLogo}
         alt='vector'
         className={classes.vector}
         style={zoom}
@@ -109,19 +109,19 @@ const SecondScreen = () => {
         direction='column'
         alignItems='center'
         wrap='nowrap'
-        style={{ zIndex: '10' }}
+        style={{ zIndex: '10', height: '420px' }}
       >
-        <h1 className={classes.year}>2019-2020</h1>
+        <h1 className={classes.year}>2020 - Current</h1>
         <animated.div className={classes.underline} style={ size }>
           <div className={classes.line}></div>
           <div className={classes.line}></div>
         </animated.div>
         <Typography variant='h6' style={{ color: '#666' }}>
-          Dooble
+          <h3>Amdocs</h3>
         </Typography>
 
         <Box component='span' m={2} style={{ zIndex: '10', color: '#212121' }}>
-          <h1>Under confidality contract</h1>
+          <h2>Amdocs Optima</h2>
         </Box>
         <Grid
           container
@@ -131,11 +131,11 @@ const SecondScreen = () => {
           lg={8}
           style={{ zIndex: '10', marginTop: '1em' }}
         >
-          <TabsComponent />
+          <TabsComponent data={Amdocs}/>
         </Grid>
       </Grid>
     </div>
   )
 }
 
-export default SecondScreen
+export default AmdocsScreen

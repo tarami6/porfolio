@@ -1,0 +1,41 @@
+{
+  "Amdocs": {
+    "title": "Amdocs",
+    "content": {
+      "subTitle1": "What my day looks like",
+      "subContent1": "I started this position as a mid-level programmer, and there is no doubt that Amdocs is a fun place to work at. Most of my day revolves around a new Amdocs product for the Asia-Pacific part of the world. I love new products as they give me an opportunity to be creative and improve the product. The product was developed by hundreds of programmers which requires a well-designed pipeline, use of TypeScript, and lots of tests. It is one of the most interesting products I have ever worked on. I enjoy working on every line of code.",
+      "subTitle2": "What I like about the position",
+      "subContent2": "Working on a product written by hundreds of programmers, the rapid pace of development, a complex product, all of these required a high level of discipline from me. Thinking outside the box, mentoring the other programmers. And I did this all with great love.",
+      "subTitle3": "What I learned in this position",
+      "subContent3": "To manage the development of a product written by lots of programmers, to work with TDD Jenkins pipelines, and to use TypeScript for neatly written code."
+    }
+  },
+  "Dooble": {
+    "title": "Dooble",
+    "content": {
+      "subTitle1": "What my day looks like",
+      "subContent1": "Mornings started out like every morning, with tasks. Checking Jira, checking for rejections, if there are any then immediately debugging, fixing them and PUSH to Git. Then examining the PO and stories. Later in the morning, planning out the day with Daily. Then, to my favorite part of the day, writing the code.",
+      "subTitle2": "What I like about the position",
+      "subContent2": "I loved working on a great enterprise product. The amount of code in the product was huge. This forced me to read the code carefully and learn the design pattern and rules of the code, to identify what is right, what is wrong and where it can be improved.\nAs a result of the vast knowledge I acquired in addition to the knowledge I already had with React, I was given the task of upgrading a version of React for the product.",
+      "subTitle3": "What I learned in this position",
+      "subContent3": "I learned to work with Jira, write and read JavaScripts OOP . Work with staff from different countries. Debug the code at the highest level."
+    }
+  },
+  "ZerBayad": {
+    "title": "ZerBayad",
+    "content": {
+      "idea": "The idea behind Zerbayad was to beat Zer4U. After performing market research and understanding what, at the technological level, Zer4U and all those who follow it were lacking, in August 2019 I decided to do a POC.",
+      "execution": "With an investment of 40 hours in development, a sales site was launched. In addition, there was an investment of NIS 2,000 into photos, and NIS 2,000 into Google Ads campaigns. The site generated in one month an income of NIS 20,000. But with zero percent profit. The majority of the margin between the cost of the product and the advertising fees was taken by the merchants. Hence the realization that the flower market was not a worthwhile market for me."
+    }
+  },
+  "Fix4U": {
+    "title": "Fix4U",
+    "content": {
+      "p1": "My first start-up, one of the most challenging and difficult things I have ever experienced. Although I experienced a glorious failure, I took the lessons with me for life.",
+      "p2": "It was the end of August 2017, and I was on my way to a flight to China, to meet a young Israeli entrepreneur living there.",
+      "p3": "At the meeting he described to me all the ideas and connections he had and offered me to lead the development of his idea, a second hand website for the Chinese market.",
+      "p4": "The truth is, it was a challenge I had to take on. No matter what he offered, I would have agreed to develop it. We decided on an investment of $100,000 where I would invest 25% percent and become a full partner in the venture.",
+      "p5": "I recruited an Israeli team that relocated to China, a penthouse in a western tourist area in Foshan. And we set off, right from the beginning we pivoted to an app that matches people who have a problem with a professional who can fix it. Within 8 months we prepared the MVP and were ready for the pilot and beta testing. Our failure came from the business side…"
+    }
+  }
+}
