@@ -14,8 +14,9 @@
   box-sizing: border-box;
 }
 .App {
-  scroll-snap-type: y proximity;
-  scroll-snap-points-y: repeat(100vh);
+  /*scroll-snap-type: y proximity;*/
+  /*scroll-snap-points-y: repeat(100vh);*/
+  scroll-snap-type: y mandatory;
   overflow-y: auto;
 }
 .App, .AppMobile{

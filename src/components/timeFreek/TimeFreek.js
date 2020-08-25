@@ -34,7 +34,7 @@ const useStyle = makeStyles(() => ({
     alignItems: 'center',
   },
 }))
-const FourthScreen = () => {
+const TimeFreek = () => {
   const classes = useStyle()
   const [on, toogle] = React.useState(false)
   const zoom = useSpring({
@@ -64,10 +64,10 @@ const FourthScreen = () => {
       <div className={classes.content}>
         <div className={classes.header}>
           <Typography variant='h6' style={{ color: '#666' }}>
-            E-Commerce
+            TimeFreek
           </Typography>
           <Box component='span' style={{ color: '#212121' }}>
-            <h1>Side Entrepreneurship</h1>
+            <h2>Mobile App</h2>
           </Box>
         </div>
         <StepperContent on={on} />
@@ -76,4 +76,4 @@ const FourthScreen = () => {
   )
 }
 
-export default FourthScreen
+export default TimeFreek

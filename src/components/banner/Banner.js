@@ -12,7 +12,8 @@ const useStyle = makeStyles(() => ({
     width: '100vw',
     height: '100vh',
     position: 'relative',
-    overflow: 'hidden'
+    overflow: 'hidden',
+
   },
   square: {
     width: '50vw',
@@ -69,19 +70,15 @@ const Banner = () => {
             className={classes.block}
           >
             <animated.div className='text'>
-              <h1>Hi, I'm Rami,</h1>
+              <h1>Hi, I'm Rami</h1>
               <Typical
-                loop={Infinity}
                 wrapper='span'
                 steps={[
-                  'UI/UX Designer,',
-                  1000,
-                  'Web Developer,',
-                  1000,
-                  'Freelancer,',
-                  1000,
-                  'Tech Leader.',
-                  2000,
+                  'Tech',
+                  3000,
+                  'Leader',
+                  3000,
+                  'Tech Leader'
                 ]}
               />
             </animated.div>

@@ -41,7 +41,8 @@ const useStyle = makeStyles(() => ({
     alignItems: 'center',
   },
 }))
-const ThirdScreen = () => {
+
+const ZerBayad = () => {
   const classes = useStyle()
   const [on, toogle] = useState(false)
   const zoom = useSpring({
@@ -77,10 +78,10 @@ const ThirdScreen = () => {
       <div className={classes.content}>
         <div className={classes.header}>
           <Typography variant='h6' style={{ color: '#666' }}>
-            E-Commerce
+            ZerBayad
           </Typography>
           <Box component='span' style={{ color: '#212121' }}>
-            <h1>Side Entrepreneurship</h1>
+            <h2>Entrepreneurship</h2>
           </Box>
         </div>
         <StepperContent on={on} />
@@ -89,4 +90,4 @@ const ThirdScreen = () => {
   )
 }
 
-export default ThirdScreen
+export default ZerBayad

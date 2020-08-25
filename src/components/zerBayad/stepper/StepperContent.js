@@ -7,22 +7,22 @@ import { animated, useSpring } from 'react-spring'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import React from 'react'
-import image1 from '../../../assets/images/image-12.png'
-import image2 from '../../../assets/images/image-11.png'
+import image1 from '../../../assets/images/image-1.png'
+import image2 from '../../../assets/images/image-2.png'
 import { makeStyles } from '@material-ui/core/styles'
+import {ZerBayad} from '../../../assets/data/data'
 
 const stepperItem = [
   {
     title: 'The Idia',
-    text:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam asperiores nesciunt exercitationem doloremque minima? Consectetur perspiciatis sit eos ad sequi enim fuga provident, nobis vitae. Ratione, necessitatibus laudantium velit et fugiat, culpa harum itaque, impedit vitae corrupti minus praesentium. Alias id nemo natus enim dolorem rerum. ',
+    text: ZerBayad.content.idea
   },
   {
-    title: 'Lorem ',
-    text:
-      'Aliquid fugit perspiciatis minus molestiae eveniet blanditiis officia autem reiciendis accusantium aliquam unde veritatis commodi, totam ex eligendi. Praesentium quas delectus, nulla quaerat, facilis, in ducimus laborum sint  eius eum iure cum minus. Dolorum adipisci ducimus ab sequi provident asperiores aut rerum eaque officiis obcaecati!',
+    title: 'Execution',
+    text: ZerBayad.content.execution
   },
-]
+];
+
 const useStyle = makeStyles((theme) => ({
   root: {},
   content: {
@@ -33,22 +33,23 @@ const useStyle = makeStyles((theme) => ({
     fontFamily: 'roboto',
   },
   image1: {
-    width: '28%',
+    width: '29%',
     position: 'absolute',
     left: '21%',
     top: '-3%',
   },
   image2: {
-    width: '62%',
+    width: '50%',
     position: 'relative',
-    left: '1%',
+    left: '6%',
   },
   paper: {
     width: '100%',
-    height: 'min-content',
+    height: '300px',
     padding: '3% 3% 3% 7%',
     marginBottom: '2%',
     boxSizing: 'border-box',
+
   },
   button: {
     display: 'flex',
@@ -109,7 +110,7 @@ const StepperContent = ({ on }) => {
               transform: scale
                 .interpolate({
                   range: [0, 0.75, 1],
-                  output: [1, 0.95, 1],
+                  output: [1,0.95, 1],
                 })
                 .interpolate((x) => `scale(${x})`),
             }}

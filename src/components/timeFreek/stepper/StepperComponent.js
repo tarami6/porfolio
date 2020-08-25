@@ -7,20 +7,14 @@ import { animated, useSpring } from 'react-spring'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import React from 'react'
-import image1 from '../../../assets/images/image-1.png'
-import image2 from '../../../assets/images/image-2.png'
+import image1 from '../../../assets/images/image-12.png'
+import image2 from '../../../assets/images/image-11.png'
 import { makeStyles } from '@material-ui/core/styles'
 
 const stepperItem = [
   {
-    title: 'The Idia',
-    text:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam asperiores nesciunt exercitationem doloremque minima? Consectetur perspiciatis sit eos ad sequi enim fuga provident, nobis vitae. Ratione, necessitatibus laudantium velit et fugiat, culpa harum itaque, impedit vitae corrupti minus praesentium. Alias id nemo natus enim dolorem rerum. ',
-  },
-  {
-    title: 'Lorem ',
-    text:
-      'Aliquid fugit perspiciatis minus molestiae eveniet blanditiis officia autem reiciendis accusantium aliquam unde veritatis commodi, totam ex eligendi. Praesentium quas delectus, nulla quaerat, facilis, in ducimus laborum sint  eius eum iure cum minus. Dolorum adipisci ducimus ab sequi provident asperiores aut rerum eaque officiis obcaecati!',
+    title: 'Timefreek',
+    text: `I built the product for production, for iOS & Android. TimeFreek aims to help families and businesses manage daily tasks, meetings, and events. The solution enables users to share calendars between different groups (e.g. family, friends, colleagues, and classmates) with all events synced with everyone in real time.`
   },
 ]
 const useStyle = makeStyles((theme) => ({
@@ -33,15 +27,15 @@ const useStyle = makeStyles((theme) => ({
     fontFamily: 'roboto',
   },
   image1: {
-    width: '29%',
+    width: '28%',
     position: 'absolute',
     left: '21%',
     top: '-3%',
   },
   image2: {
-    width: '50%',
+    width: '62%',
     position: 'relative',
-    left: '6%',
+    left: '1%',
   },
   paper: {
     width: '100%',
@@ -109,7 +103,7 @@ const StepperContent = ({ on }) => {
               transform: scale
                 .interpolate({
                   range: [0, 0.75, 1],
-                  output: [1,0.95, 1],
+                  output: [1, 0.95, 1],
                 })
                 .interpolate((x) => `scale(${x})`),
             }}
@@ -121,26 +115,7 @@ const StepperContent = ({ on }) => {
           <Typography>{stepperItem[activeStep].text}</Typography>
         </Paper>
       </div>
-      <div className={classes.button}>
-        <Fab
-          className={classes.arrow}
-          size='small'
-          color='primary'
-          aria-label='prev'
-          onClick={handleBack}
-        >
-          <KeyboardArrowLeft />
-        </Fab>
-        <Fab
-          className={classes.arrow}
-          size='small'
-          color='primary'
-          aria-label='prev'
-          onClick={handleNext}
-        >
-          <KeyboardArrowRight />
-        </Fab>
-      </div>
+
     </div>
   )
 }
