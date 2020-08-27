@@ -1,28 +1,17 @@
 import 'fontsource-roboto'
 
-import { Fab, Paper, Typography } from '@material-ui/core'
-
+import { Paper, Typography } from '@material-ui/core'
 import { animated, useSpring } from 'react-spring'
-
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import React from 'react'
 import image1 from '../../../../assets/images/image-12.png'
 import image2 from '../../../../assets/images/image-11.png'
 import { makeStyles } from '@material-ui/core/styles'
 
-const stepperItem = [
-  {
-    title: 'The Idia',
-    text:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam asperiores nesciunt exercitationem doloremque minima?',
-  },
-  {
-    title: 'Lorem ',
-    text:
-      'Aliquid fugit perspiciatis minus molestiae eveniet blanditiis officia autem reiciendis accusantium aliquam unde veritatis commodi!',
-  },
-]
+const stepperItem = {
+  title: 'Timefreek',
+  text: `I built the product for production, for iOS & Android. TimeFreek aims to help families and businesses manage daily tasks, meetings, and events. The solution enables users to share calendars between different groups (e.g. family, friends, colleagues, and classmates) with all events synced with everyone in real time.`,
+}
+
 const useStyle = makeStyles((theme) => ({
   root: {
     width: '100%',
@@ -33,43 +22,33 @@ const useStyle = makeStyles((theme) => ({
   },
   images: {
     display: 'block',
-    height: '45%',
+    height: '50%',
     position: 'relative',
   },
   image1: {
-    height: '115%',
+    height: '125%',
     position: 'absolute',
-    left: '50%',
+    left: '55%',
     top: 0,
     zIndex: '3',
   },
   image2: {
-    height: '95%',
+    height: '100%',
     position: 'relative',
     left: '13%',
     zIndex: '3',
   },
   peperContent: {
-    height: '40%',
+    height: '45%',
   },
   paper: {
     width: '100%',
     height: '100%',
-    padding: '3% 3% 3% 7%',
+    padding: '7%',
     boxSizing: 'border-box',
     background: 'transparent',
     zIndex: '2',
-  },
-  button: {
-    height: '15%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  arrow: {
-    margin: theme.spacing(1),
-    backgroundColor: '#4c23ea',
-  },
+  }
 }))
 
 const StepperContent = ({ on }) => {
@@ -79,21 +58,6 @@ const StepperContent = ({ on }) => {
     scale: on ? '1' : '0',
     config: { duration: 1500 },
   })
-
-  const [activeStep, setActiveStep] = React.useState(0)
-  const lastItem = stepperItem.length - 1
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) =>
-      prevActiveStep === lastItem ? (prevActiveStep = 0) : prevActiveStep + 1
-    )
-  }
-
-  const handleBack = () => {
-    setActiveStep((nextActiveStep) =>
-      nextActiveStep === 0 ? (nextActiveStep = lastItem) : nextActiveStep - 1
-    )
-  }
 
   return (
     <div className={classes.root}>
@@ -127,35 +91,15 @@ const StepperContent = ({ on }) => {
       </div>
       <div className={classes.peperContent}>
         <Paper square elevation={0} className={classes.paper}>
-          <Typography variant='h3'>{stepperItem[activeStep].title}</Typography>
+          <Typography variant='h3'>{stepperItem.title}</Typography>
           <Typography
             style={{
-              fontSize: '4vw',
+              fontSize: '3vw',
             }}
           >
-            {stepperItem[activeStep].text}
+            {stepperItem.text}
           </Typography>
         </Paper>
-      </div>
-      <div className={classes.button}>
-        <Fab
-          className={classes.arrow}
-          size='small'
-          color='primary'
-          aria-label='prev'
-          onClick={handleBack}
-        >
-          <KeyboardArrowLeft />
-        </Fab>
-        <Fab
-          className={classes.arrow}
-          size='small'
-          color='primary'
-          aria-label='prev'
-          onClick={handleNext}
-        >
-          <KeyboardArrowRight />
-        </Fab>
       </div>
     </div>
   )

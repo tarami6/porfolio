@@ -1,11 +1,7 @@
 import 'fontsource-roboto'
 
-import { Fab, Paper, Typography } from '@material-ui/core'
-
+import { Paper, Typography } from '@material-ui/core'
 import { animated, useSpring } from 'react-spring'
-
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import React from 'react'
 import image1 from '../../../assets/images/image-12.png'
 import image2 from '../../../assets/images/image-11.png'
@@ -14,7 +10,7 @@ import { makeStyles } from '@material-ui/core/styles'
 const stepperItem = [
   {
     title: 'Timefreek',
-    text: `I built the product for production, for iOS & Android. TimeFreek aims to help families and businesses manage daily tasks, meetings, and events. The solution enables users to share calendars between different groups (e.g. family, friends, colleagues, and classmates) with all events synced with everyone in real time.`
+    text: `I built the product for production, for iOS & Android. TimeFreek aims to help families and businesses manage daily tasks, meetings, and events. The solution enables users to share calendars between different groups (e.g. family, friends, colleagues, and classmates) with all events synced with everyone in real time.`,
   },
 ]
 const useStyle = makeStyles((theme) => ({
@@ -63,21 +59,6 @@ const StepperContent = ({ on }) => {
     config: { duration: 1500 },
   })
 
-  const [activeStep, setActiveStep] = React.useState(0)
-  const lastItem = stepperItem.length - 1
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) =>
-      prevActiveStep === lastItem ? (prevActiveStep = 0) : prevActiveStep + 1
-    )
-  }
-
-  const handleBack = () => {
-    setActiveStep((nextActiveStep) =>
-      nextActiveStep === 0 ? (nextActiveStep = lastItem) : nextActiveStep - 1
-    )
-  }
-
   return (
     <div className={classes.root}>
       <div className={classes.content}>
@@ -111,11 +92,10 @@ const StepperContent = ({ on }) => {
         </div>
 
         <Paper square elevation={0} className={classes.paper}>
-          <Typography variant='h4'>{stepperItem[activeStep].title}</Typography>
-          <Typography>{stepperItem[activeStep].text}</Typography>
+          <Typography variant='h4'>{stepperItem.title}</Typography>
+          <Typography>{stepperItem.text}</Typography>
         </Paper>
       </div>
-
     </div>
   )
 }

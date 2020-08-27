@@ -11,7 +11,7 @@ import bg2 from '../../assets/images/bg-2.png'
 import lock from '../../assets/images/lock.png'
 import { makeStyles } from '@material-ui/core/styles'
 import vector from '../../assets/images/vector.png'
-import {Dooble} from '../../assets/data/data'
+import { Dooble } from '../../assets/data/data'
 
 const useStyle = makeStyles(() => ({
   root: {
@@ -27,6 +27,7 @@ const useStyle = makeStyles(() => ({
   bgLeft: {
     width: '36%',
     position: 'absolute',
+    top: '21%',
     left: '-10%',
   },
   bgRight: {
@@ -38,7 +39,7 @@ const useStyle = makeStyles(() => ({
   lock: {
     width: '18%',
     position: 'absolute',
-    top: '21%',
+    top: '26%',
     left: '2%',
   },
   vector: {
@@ -113,7 +114,7 @@ const DoobleScreen = () => {
         style={{ zIndex: '10', height: '420px' }}
       >
         <h1 className={classes.year}>2019-2020</h1>
-        <animated.div className={classes.underline} style={ size }>
+        <animated.div className={classes.underline} style={size}>
           <div className={classes.line}></div>
           <div className={classes.line}></div>
         </animated.div>
@@ -132,7 +133,7 @@ const DoobleScreen = () => {
           lg={8}
           style={{ zIndex: '10', marginTop: '1em' }}
         >
-          <TabsComponent data={Dooble}/>
+          <TabsComponent data={Dooble} />
         </Grid>
       </Grid>
     </div>

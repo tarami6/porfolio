@@ -29,7 +29,7 @@ const FourthMobile = () => {
             <div className={classes.inlineContent}>
               <h1>Chinise Startup</h1>
               <AnButton
-                variant='contained'
+                variant='contained' 
                 color='primary'
                 disableElevation
                 onClick={() => toogle(!on)}

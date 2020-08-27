@@ -33,7 +33,7 @@ const useStyle = makeStyles((theme) => ({
   },
   images: {
     display: 'block',
-    height: '45%',
+    height: '50%',
     position: 'relative',
   },
   image1: {
@@ -50,15 +50,15 @@ const useStyle = makeStyles((theme) => ({
     zIndex: '3',
   },
   peperContent: {
-    height: '40%',
-    padding: '0 4%',
-    zIndex: '4',
+    height: '45%',
   },
   paper: {
     width: '100%',
     height: '100%',
-    padding: '3% 3% 3% 7%',
+    padding: '7%',
     boxSizing: 'border-box',
+    background: 'transparent',
+    zIndex: '2',
   },
   button: {
     height: '15%',
