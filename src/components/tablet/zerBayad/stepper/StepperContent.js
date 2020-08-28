@@ -10,58 +10,63 @@ import React from 'react'
 import image1 from '../../../../assets/images/image-1.png'
 import image2 from '../../../../assets/images/image-2.png'
 import { makeStyles } from '@material-ui/core/styles'
+import { ZerBayad } from '../../../../assets/data/data'
 
 const stepperItem = [
   {
     title: 'The Idia',
-    text:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam asperiores nesciunt exercitationem doloremque minima?',
+    text: ZerBayad.content.idea,
   },
   {
-    title: 'Lorem ',
-    text:
-      'Aliquid fugit perspiciatis minus molestiae eveniet blanditiis officia autem reiciendis accusantium aliquam unde veritatis commodi!',
+    title: 'Execution ',
+    text: ZerBayad.content.execution,
   },
 ]
 const useStyle = makeStyles((theme) => ({
   root: {
     width: '100%',
     height: '100%',
-    display: 'block',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     position: 'relative',
     fontFamily: 'roboto',
   },
   images: {
     display: 'block',
-    height: '50%',
+    height: '43%',
     position: 'relative',
   },
   image1: {
     height: '115%',
     position: 'absolute',
-    left: '50%',
+    left: '47%',
     top: 0,
     zIndex: '3',
   },
   image2: {
     height: '95%',
     position: 'relative',
-    left: '15%',
+    left: '17%',
     zIndex: '3',
   },
   peperContent: {
-    height: '45%',
+    height: '47%',
   },
   paper: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
     width: '100%',
     height: '100%',
-    padding: '7%',
+    paddingLeft: '7%',
+    paddingRight: '7%',
     boxSizing: 'border-box',
     background: 'transparent',
     zIndex: '2',
   },
   button: {
-    height: '15%',
+    height: '10%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -130,7 +135,7 @@ const StepperContent = ({ on }) => {
           <Typography variant='h3'>{stepperItem[activeStep].title}</Typography>
           <Typography
             style={{
-              fontSize: '4vw',
+              fontSize: '3vw',
             }}
           >
             {stepperItem[activeStep].text}

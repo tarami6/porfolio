@@ -12,7 +12,7 @@ import image2 from '../../../assets/images/image-2.png'
 import { makeStyles } from '@material-ui/core/styles'
 import { ZerBayad } from '../../../assets/data/data'
 
-const stepperItem = [
+const stepperItem = [ 
   {
     title: 'The Idia',
     text: ZerBayad.content.idea,

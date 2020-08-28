@@ -1,9 +1,9 @@
 import React from 'react'
 import 'fontsource-roboto'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
-import left from '../../assets/images/screen4-1.png'
-import right from '../../assets/images/screen4-2.png'
-import fix4u from '../../assets/images/fix4u.png'
+import left from '../../../assets/images/screen4-1.png'
+import right from '../../../assets/images/screen4-2.png'
+import fix4u from '../../../assets/images/fix4u.png'
 import { Button } from '@material-ui/core'
 import { Cancel } from '@material-ui/icons'
 import Story from './story'
@@ -27,20 +27,20 @@ const useStyle = makeStyles(() => ({
     height: 'auto',
     position: 'absolute',
     left: '0',
-    top: '15%',
+    top: '30%',
   },
   right: {
     width: '7%',
     height: 'auto',
     position: 'absolute',
     right: '0',
-    top: '15%',
+    top: '30%',
   },
   fix4u: {
     width: '60%',
     position: 'absolute',
     left: '24%',
-    top: '12%',
+    top: '30%',
   },
   container: {
     display: 'block',
@@ -74,7 +74,7 @@ const useStyle = makeStyles(() => ({
   },
 }))
 
-const FixForYou = () => {
+const FixForYouTablet = () => {
   const classes = useStyle()
   const [on, toogle] = React.useState(false)
   const bgColor = on ? 'rgba(0,0,0,0.1)' : 'none'
@@ -119,4 +119,4 @@ const FixForYou = () => {
   )
 }
 
-export default FixForYou
+export default FixForYouTablet

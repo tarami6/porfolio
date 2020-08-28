@@ -51,7 +51,7 @@ const useStyle = makeStyles(() => ({
     height: '85%',
   },
 }))
-const SecondTablet = () => {
+const TimeFeekTablet = () => {
   const classes = useStyle()
   const [on, toogle] = useState(false)
 
@@ -87,4 +87,4 @@ const SecondTablet = () => {
   )
 }
 
-export default SecondTablet
+export default TimeFeekTablet

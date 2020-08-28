@@ -23,14 +23,14 @@ const FourthMobile = lazy(() =>
 const FirstTablet = lazy(() =>
   import('./components/tablet/firstScreen/FirstTablet')
 )
-const SecondTablet = lazy(() =>
-  import('./components/tablet/secondScreen/SecondTablet')
+const TimeFeekTablet = lazy(() =>
+  import('./components/tablet/timeFeek/TimeFeekTablet')
 )
-const ThirdTablet = lazy(() =>
-  import('./components/tablet/thirdScreen/ThirdTablet')
+const ZerBayadTablet = lazy(() =>
+  import('./components/tablet/zerBayad/ZerBayadTablet')
 )
-const FourthTablet = lazy(() =>
-  import('./components/tablet/fourthScreen/FourthTablet')
+const FixForYouTablet = lazy(() =>
+  import('./components/tablet/fixForYou/FixForYouTablet')
 )
 
 const Mobile = () => (
@@ -63,9 +63,9 @@ const Tablet = () => (
       <FirstTablet />
       <AmdocsScreen />
       <DoobleScreen />
-      <SecondTablet />
-      <ThirdTablet />
-      <FourthTablet />
+      <TimeFeekTablet />
+      <ZerBayadTablet />
+      <FixForYouTablet />
     </Suspense>
   </div>
 )

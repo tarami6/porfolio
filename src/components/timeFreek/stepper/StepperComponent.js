@@ -7,12 +7,11 @@ import image1 from '../../../assets/images/image-12.png'
 import image2 from '../../../assets/images/image-11.png'
 import { makeStyles } from '@material-ui/core/styles'
 
-const stepperItem = [
+const stepperItem =
   {
     title: 'Timefreek',
     text: `I built the product for production, for iOS & Android. TimeFreek aims to help families and businesses manage daily tasks, meetings, and events. The solution enables users to share calendars between different groups (e.g. family, friends, colleagues, and classmates) with all events synced with everyone in real time.`,
-  },
-]
+  }
 const useStyle = makeStyles((theme) => ({
   root: {},
   content: {

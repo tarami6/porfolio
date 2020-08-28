@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid } from '@material-ui/core'
 import Background from './background'
-import NavBar from './appBar'
+import NavBar from '../../mobile/firstScreen/appBar'
 import '../../../assets/fonts/RozhaOne-Regular.ttf'
 
 const useStyle = makeStyles(() => ({
@@ -25,7 +25,7 @@ const useStyle = makeStyles(() => ({
   },
   square: {
     width: '80%',
-    height: '55%',
+    height: '45%',
     background: 'linear-gradient(0deg,#4c23ea, #eb3da1)',
     position: 'absolute',
     boxShadow: '0 15px 18px 10px rgba(0,0,0,0.4)',

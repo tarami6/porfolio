@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
-import { Fix4U } from '../../../assets/data/data'
+import {Fix4U} from '../../../../assets/data/data'
 
 const useStyle = makeStyles(() => ({
   root: {
@@ -9,7 +9,7 @@ const useStyle = makeStyles(() => ({
     backgroundColor: 'white',
     overflowY: 'auto',
     padding: '40px',
-    fontSize: '1.5vw',
+    fontSize: '16px',
   },
 }))
 
