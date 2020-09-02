@@ -17,7 +17,7 @@ const AnButton = withStyles({
 const useStyle = makeStyles(() => ({
   root: {
     width: '100%',
-    height: '100%',
+    height: '100vh',
     position: 'relative',
     lineHeight: '1.6',
     fontFamily: 'roboto',
@@ -27,27 +27,28 @@ const useStyle = makeStyles(() => ({
     height: 'auto',
     position: 'absolute',
     left: '0',
-    top: '30%',
+    top: '25%',
   },
   right: {
     width: '7%',
     height: 'auto',
     position: 'absolute',
     right: '0',
-    top: '30%',
+    top: '25%',
   },
   fix4u: {
     width: '60%',
     position: 'absolute',
     left: '24%',
-    top: '30%',
+    top: '25%',
   },
   container: {
     display: 'block',
     width: '100%',
     height: '100%',
-    padding: '100px 100px 20px 100px',
+    padding: '8vw',
     position: 'relative',
+    marginTop: '50px',
     zIndex: '1',
   },
   story: {
@@ -60,11 +61,10 @@ const useStyle = makeStyles(() => ({
     height: '30%',
     flexDirection: 'column',
     justifyContent: 'center',
+    paddingTop: '5vh',
   },
   inlineContent: {
-    display: 'flex',
-    alignContent: 'center',
-    justifyContent: 'space-between',
+    display: 'block',
   },
   closeContainer: {
     display: 'flex',

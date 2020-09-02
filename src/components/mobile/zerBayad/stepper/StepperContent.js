@@ -36,7 +36,7 @@ const useStyle = makeStyles((theme) => ({
     display: 'block',
     height: '43%',
     position: 'relative',
-    marginTop: '15px',
+    marginTop: '35px',
   },
   image1: {
     height: '63vw',
@@ -53,7 +53,7 @@ const useStyle = makeStyles((theme) => ({
   },
   peperContent: {
     minHeight: '47%',
-    marginTop: '25px',
+    marginTop: '35px',
     marginBottom: '25px',
   },
   paper: {
@@ -61,7 +61,7 @@ const useStyle = makeStyles((theme) => ({
     justifyContent: 'center',
     flexDirection: 'column',
     width: '100%',
-    height: '350px',
+    height: '550px',
     padding: '7%',
     boxSizing: 'border-box',
     zIndex: '2',
@@ -136,7 +136,7 @@ const StepperContent = ({ on }) => {
           <Typography variant='h5'>{stepperItem[activeStep].title}</Typography>
           <Typography
             style={{
-              fontSize: '4vw',
+              fontSize: '5vw',
             }}
           >
             {stepperItem[activeStep].text}

@@ -15,7 +15,7 @@ const stepperItem = {
 const useStyle = makeStyles((theme) => ({
   root: {
     width: '100%',
-    height: '100%',
+    minHeight: '100%',
     display: 'block',
     position: 'relative',
     fontFamily: 'roboto',
@@ -24,6 +24,7 @@ const useStyle = makeStyles((theme) => ({
     display: 'block',
     height: '45%',
     position: 'relative',
+    marginTop: '35px',
   },
   image1: {
     height: '60vw',
@@ -40,6 +41,7 @@ const useStyle = makeStyles((theme) => ({
   },
   peperContent: {
     height: '50%',
+    marginTop: '35px',
   },
   paper: {
     width: '100%',
@@ -91,10 +93,10 @@ const StepperContent = ({ on }) => {
       </div>
       <div className={classes.peperContent}>
         <Paper square elevation={0} className={classes.paper}>
-          <Typography variant='h6'>{stepperItem.title}</Typography>
+          <Typography variant='h5'>{stepperItem.title}</Typography>
           <Typography
             style={{
-              fontSize: '4vw',
+              fontSize: '5vw',
             }}
           >
             {stepperItem.text}

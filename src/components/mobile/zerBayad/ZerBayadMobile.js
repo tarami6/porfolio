@@ -40,7 +40,6 @@ const useStyle = makeStyles(() => ({
   content: {
     minHeight: '80vh',
     padding: '20px 2em',
-    marginTop: '50px',
     boxSizing: 'border-box',
   },
   header: {
@@ -76,7 +75,7 @@ const ZerBayadMobile = () => {
       <div className={classes.container}>
         <div className={classes.content}>
           <div className={classes.header}>
-            <Typography variant='h5' style={{ color: '#666', fontSize: '4vw' }}>
+            <Typography variant='h4' style={{ color: '#666', fontSize: '4vw' }}>
               ZerBayad
             </Typography>
             <Box

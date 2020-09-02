@@ -35,9 +35,6 @@ const useStyle = makeStyles(() => ({
   content: {
     minHeight: '80vh',
     padding: '10px 1em',
-    marginTop: '100px',
-    position: 'absolute',
-    top: 0,
     boxSizing: 'border-box',
   },
   header: {
@@ -72,7 +69,7 @@ const TimeFeekMobile = () => {
       </div>
       <div className={classes.content}>
         <div className={classes.header}>
-          <Typography variant='h5' style={{ color: '#666', fontSize: '5vw' }}>
+          <Typography variant='h4' style={{ color: '#666', fontSize: '5vw' }}>
             TimeFreek
           </Typography>
           <Box
