@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid } from '@material-ui/core'
 import Background from './background'
-import NavBar from '../../mobile/firstScreen/appBar'
+import NavBar from '../../mobile/banner/appBar'
 import '../../../assets/fonts/RozhaOne-Regular.ttf'
 
 const useStyle = makeStyles(() => ({
@@ -72,7 +72,7 @@ const useStyle = makeStyles(() => ({
   },
 }))
 
-const FirstTablet = () => {
+const BannerTablet = () => {
   const classes = useStyle()
   const animContent = useSpring({
     from: {
@@ -128,4 +128,4 @@ const FirstTablet = () => {
   )
 }
 
-export default FirstTablet
+export default BannerTablet

@@ -7,62 +7,67 @@ import { animated, useSpring } from 'react-spring'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import React from 'react'
-import image1 from '../../../../assets/images/image-12.png'
-import image2 from '../../../../assets/images/image-11.png'
+import image1 from '../../../../assets/images/image-1.png'
+import image2 from '../../../../assets/images/image-2.png'
 import { makeStyles } from '@material-ui/core/styles'
+import { ZerBayad } from '../../../../assets/data/data'
 
 const stepperItem = [
   {
     title: 'The Idia',
-    text:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam asperiores nesciunt exercitationem doloremque minima?',
+    text: ZerBayad.content.idea,
   },
   {
-    title: 'Lorem ',
-    text:
-      'Aliquid fugit perspiciatis minus molestiae eveniet blanditiis officia autem reiciendis accusantium aliquam unde veritatis commodi!',
+    title: 'Execution ',
+    text: ZerBayad.content.execution,
   },
 ]
 const useStyle = makeStyles((theme) => ({
   root: {
     width: '100%',
-    height: '100%',
-    display: 'block',
+    minHeight: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     position: 'relative',
     fontFamily: 'roboto',
   },
   images: {
     display: 'block',
-    height: '42%',
+    height: '43%',
     position: 'relative',
+    marginTop: '15px',
   },
   image1: {
-    height: '115%',
+    height: '63vw',
     position: 'absolute',
-    left: '50%',
+    left: '47%',
     top: 0,
     zIndex: '3',
   },
   image2: {
-    height: '95%',
+    height: '50vw',
     position: 'relative',
-    left: '7%',
+    left: '10%',
     zIndex: '3',
   },
   peperContent: {
-    height: '43%',
-    position: 'relative',
+    minHeight: '47%',
+    marginTop: '25px',
+    marginBottom: '25px',
   },
   paper: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
     width: '100%',
-    height: '100%',
-    padding: '3% 3% 3% 7%',
+    height: '350px',
+    padding: '7%',
     boxSizing: 'border-box',
-    background: 'transparent',
     zIndex: '2',
   },
   button: {
-    height: '15%',
+    minHeight: '10%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -128,7 +133,7 @@ const StepperContent = ({ on }) => {
       </div>
       <div className={classes.peperContent}>
         <Paper square elevation={0} className={classes.paper}>
-          <Typography variant='h6'>{stepperItem[activeStep].title}</Typography>
+          <Typography variant='h5'>{stepperItem[activeStep].title}</Typography>
           <Typography
             style={{
               fontSize: '4vw',
