@@ -14,7 +14,7 @@ import TabAccordions from '../../components/accordions'
 const useStyle = makeStyles(() => ({
   root: {
     width: '100vw',
-    minHeight: 'max-content',
+    minHeight: '450px',
     fontFamily: 'roboto',
     position: 'relative',
     overflow: 'hidden',
@@ -24,25 +24,26 @@ const useStyle = makeStyles(() => ({
   bgLeft: {
     width: '36%',
     position: 'absolute',
+    top: '150px',
     left: '-10%',
   },
   bgRight: {
     width: '40%',
     position: 'absolute',
+    top: '300px',
     right: '-2%',
-    bottom: '-1%',
   },
   lock: {
     width: '18%',
     position: 'absolute',
-    top: '21%',
+    top: 150,
     left: '2%',
   },
   vector: {
     width: '35%',
     position: 'absolute',
+    top: 300,
     right: '-2%',
-    bottom: '0%',
   },
   year: {
     color: '#eb3da1',
@@ -105,7 +106,7 @@ const AmdocsMobile = () => {
         direction='column'
         alignItems='center'
         wrap='nowrap'
-        style={{ zIndex: '10' }}
+        style={{ zIndex: '10', marginBottom: '30px' }}
       >
         <h1 className={classes.year}>2020 - Current</h1>
         <animated.div className={classes.underline} style={size}>
@@ -120,7 +121,7 @@ const AmdocsMobile = () => {
           <h2>Amdocs Optima</h2>
         </Box>
       </Grid>
-          <TabAccordions data={Amdocs} />
+      <TabAccordions data={Amdocs} />
     </div>
   )
 }

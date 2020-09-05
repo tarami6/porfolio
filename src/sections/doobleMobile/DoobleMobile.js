@@ -16,6 +16,7 @@ import TabAccordions from '../../components/accordions'
 const useStyle = makeStyles(() => ({
   root: {
     width: '100vw',
+    minHeight: '450px',
     fontFamily: 'roboto',
     position: 'relative',
     overflow: 'hidden',
@@ -25,26 +26,26 @@ const useStyle = makeStyles(() => ({
   bgLeft: {
     width: '36%',
     position: 'absolute',
-    top: '21%',
+    top: '150px',
     left: '-10%',
   },
   bgRight: {
     width: '40%',
     position: 'absolute',
+    top: '350px',
     right: '-2%',
-    bottom: '-1%',
   },
   lock: {
     width: '18%',
     position: 'absolute',
-    top: '26%',
+    top: '170px',
     left: '2%',
   },
   vector: {
     width: '35%',
     position: 'absolute',
     right: '-2%',
-    bottom: '0%',
+    top: '350px',
   },
   year: {
     color: '#eb3da1',
