@@ -71,7 +71,7 @@ const ZerBayad = () => {
         <animated.img
           src={two}
           alt='left'
-          className={classes.two}
+          className={classes.two} 
           style={zoom}
         />
       </div>

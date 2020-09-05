@@ -35,7 +35,7 @@ const useStyle = makeStyles(() => ({
   content: {
     height: '80vh',
     padding: '10px 1em',
-    marginTop: '50px',
+    marginTop: '100px',
     position: 'absolute',
     top: 0,
     boxSizing: 'border-box',
@@ -51,7 +51,7 @@ const useStyle = makeStyles(() => ({
     height: '85%',
   },
 }))
-const SecondTablet = () => {
+const TimeFeekTablet = () => {
   const classes = useStyle()
   const [on, toogle] = useState(false)
 
@@ -72,14 +72,11 @@ const SecondTablet = () => {
       </div>
       <div className={classes.content}>
         <div className={classes.header}>
-          <Typography variant='h6' style={{ color: '#666', fontSize: '5vw' }}>
-            E-Commerce
+          <Typography variant='h6' style={{ color: '#666', fontSize: '4vw' }}>
+            TimeFreek
           </Typography>
-          <Box
-            component='span'
-            style={{ zIndex: '10', color: '#212121', fontSize: '5vw' }}
-          >
-            <h3>Side Entrepreneurship</h3>
+          <Box component='span' style={{ zIndex: '10', color: '#212121', fontSize: '4vw' }}>
+            <h2>Mobile App</h2>
           </Box>
         </div>
         <div className={classes.stepper}>
@@ -90,4 +87,4 @@ const SecondTablet = () => {
   )
 }
 
-export default SecondTablet
+export default TimeFeekTablet

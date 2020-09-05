@@ -10,18 +10,18 @@ import React from 'react'
 import image1 from '../../../assets/images/image-1.png'
 import image2 from '../../../assets/images/image-2.png'
 import { makeStyles } from '@material-ui/core/styles'
-import {ZerBayad} from '../../../assets/data/data'
+import { ZerBayad } from '../../../assets/data/data'
 
-const stepperItem = [
+const stepperItem = [ 
   {
     title: 'The Idia',
-    text: ZerBayad.content.idea
+    text: ZerBayad.content.idea,
   },
   {
     title: 'Execution',
-    text: ZerBayad.content.execution
+    text: ZerBayad.content.execution,
   },
-];
+]
 
 const useStyle = makeStyles((theme) => ({
   root: {},
@@ -44,12 +44,14 @@ const useStyle = makeStyles((theme) => ({
     left: '6%',
   },
   paper: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
     width: '100%',
     height: '300px',
     padding: '3% 3% 3% 7%',
     marginBottom: '2%',
     boxSizing: 'border-box',
-
   },
   button: {
     display: 'flex',
@@ -110,7 +112,7 @@ const StepperContent = ({ on }) => {
               transform: scale
                 .interpolate({
                   range: [0, 0.75, 1],
-                  output: [1,0.95, 1],
+                  output: [1, 0.95, 1],
                 })
                 .interpolate((x) => `scale(${x})`),
             }}
