@@ -117,7 +117,7 @@ const AmdocsScreen = () => {
           <div className={classes.line}></div>
         </animated.div>
         <Typography variant='h6' style={{ color: '#666' }}>
-          <h3>Amdocs</h3>
+          Amdocs
         </Typography>
 
         <Box component='span' m={2} style={{ zIndex: '10', color: '#212121' }}>

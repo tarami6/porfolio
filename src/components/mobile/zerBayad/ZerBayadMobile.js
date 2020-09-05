@@ -12,11 +12,11 @@ import two from '../../../assets/images/leftcorner.png'
 const useStyle = makeStyles(() => ({
   root: {
     width: '100%',
-    height: '100vh',
+    minHeight: '100vh',
     fontFamily: 'roboto',
-    overflow: 'hidden',
     position: 'relative',
-    paddingTop: '50px',
+    paddingTop: '20px',
+    paddingBottom: '20px',
   },
   one: {
     width: '25%',
@@ -33,29 +33,27 @@ const useStyle = makeStyles(() => ({
     zIndex: '1',
   },
   container: {
-    height: '100%',
+    width: '100%',
+    minHeight: '100%',
     background: '#f1f1f1',
   },
   content: {
-    height: '80vh',
-    padding: '10px 1em',
-    marginTop: '50px',
-    position: 'absolute',
-    top: 0,
+    minHeight: '80vh',
+    padding: '20px 2em',
     boxSizing: 'border-box',
   },
   header: {
     display: 'flex',
-    height: '15%',
+    minHeight: '15%',
     flexDirection: 'column',
     alignItems: 'center',
   },
   stepper: {
     display: 'block',
-    height: '85%',
+    minHeight: '85%',
   },
 }))
-const ThirdMobile = () => {
+const ZerBayadMobile = () => {
   const classes = useStyle()
   const [on, toogle] = useState(false)
 
@@ -77,14 +75,14 @@ const ThirdMobile = () => {
       <div className={classes.container}>
         <div className={classes.content}>
           <div className={classes.header}>
-            <Typography variant='h6' style={{ color: '#666', fontSize: '5vw' }}>
-              E-Commerce
+            <Typography variant='h4' style={{ color: '#666', fontSize: '4vw' }}>
+              ZerBayad
             </Typography>
             <Box
               component='span'
               style={{ zIndex: '10', color: '#212121', fontSize: '5vw' }}
             >
-              <h3>Side Entrepreneurship</h3>
+              <h2>Entrepreneurship</h2>
             </Box>
           </div>
           <div className={classes.stepper}>
@@ -96,4 +94,4 @@ const ThirdMobile = () => {
   )
 }
 
-export default ThirdMobile
+export default ZerBayadMobile

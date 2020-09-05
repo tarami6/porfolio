@@ -4,31 +4,19 @@ import Typical from 'react-typical'
 import { useSpring, animated } from 'react-spring'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid } from '@material-ui/core'
-import Background from './background/Background'
-import NavBar from './appBar/NavBar'
-import SecondScreen from './secondScreen/SecondScreen'
+import Background from './background'
+import NavBar from './appBar'
 import '../../../assets/fonts/RozhaOne-Regular.ttf'
 
 const useStyle = makeStyles(() => ({
   root: {
     display: 'flex',
-    flexDirection: 'column',
     width: '100vw',
-    height: '100vh',
-    position: 'relative',
-  },
-  banner: {
-    width: '100%',
-    height: '45%',
-    backgroundColor: 'linear-gradient(0deg, #eb3da1, #4c23ea)',
+    height: '45vh',
+    flexDirection: 'column',
     position: 'relative',
     overflow: 'hidden',
-  },
-  tabContent: {
-    width: '100%',
-    height: '55%',
-    background: '#fafafa',
-    position: 'relative',
+    backgroundColor: 'linear-gradient(0deg, #eb3da1, #4c23ea)',
   },
   square: {
     width: '80%',
@@ -51,7 +39,7 @@ const useStyle = makeStyles(() => ({
   },
   image: {
     width: '80%',
-    height: '80%'
+    height: '80%',
   },
   text: {
     display: 'flex',
@@ -79,7 +67,7 @@ const useStyle = makeStyles(() => ({
   },
 }))
 
-const FirstMobile = () => {
+const BannerMobile = () => {
   const classes = useStyle()
   const animContent = useSpring({
     from: {
@@ -96,46 +84,37 @@ const FirstMobile = () => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.banner}>
-        <NavBar />
-        <Background />
-        <Grid container justify='center'>
-          {/* Square */}
-          <animated.div className={classes.square} style={animContent} />
+      <NavBar />
+      <Background />
+      <Grid container justify='center'>
+        {/* Square */}
+        <animated.div className={classes.square} style={animContent} />
 
-          {/* image */}
-          <animated.div
-            style={animContent}
-            src={deux}
-            className={classes.block}
-          >
-            <animated.div className={classes.text}>
-              <h1 className={classes.h1}>Hi, I'm Rami,</h1>
-              <Typical
-                className={classes.span}
-                loop={Infinity}
-                wrapper='span'
-                steps={[
-                  'UI/UX Designer,',
-                  1000,
-                  'Web Developer,',
-                  1000,
-                  'Freelancer,',
-                  1000,
-                  'Tech Leader.',
-                  2000,
-                ]}
-              />
-            </animated.div>
-            <animated.img src={deux} alt='Rami' className={classes.image} />
+        {/* image */}
+        <animated.div style={animContent} src={deux} className={classes.block}>
+          <animated.div className={classes.text}>
+            <h1 className={classes.h1}>Hi, I'm Rami,</h1>
+            <Typical
+              className={classes.span}
+              loop={Infinity}
+              wrapper='span'
+              steps={[
+                'UI/UX Designer,',
+                1000,
+                'Web Developer,',
+                1000,
+                'Freelancer,',
+                1000,
+                'Tech Leader.',
+                2000,
+              ]}
+            />
           </animated.div>
-        </Grid>
-      </div>
-      <div className={classes.tabContent}>
-        <SecondScreen />
-      </div>
+          <animated.img src={deux} alt='Rami' className={classes.image} />
+        </animated.div>
+      </Grid>
     </div>
   )
 }
 
-export default FirstMobile
+export default BannerMobile

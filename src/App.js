@@ -2,26 +2,33 @@ import React, { Suspense, lazy } from 'react'
 import './App.css'
 import SuspenseComp from './components/SuspenseComp'
 
+//imports Desk
 const Banner = lazy(() => import('./components/banner/Banner'))
 const AmdocsScreen = lazy(() => import('./sections/amdocsScreen'))
-const DoobleScreen = lazy(() => import('./sections/doobleScreen/'))
+const DoobleScreen = lazy(() => import('./sections/doobleScreen'))
 const ZerBayad = lazy(() => import('./components/zerBayad/ZerBayad'))
 const TimeFreek = lazy(() => import('./components/timeFreek/TimeFreek'))
 const FixForYou = lazy(() => import('./components/fixForYou/FixForYou'))
-const FirstMobile = lazy(() =>
-  import('./components/mobile/firstScreen/FirstMobile')
+
+//imports Mobile
+const AmdocsMobile = lazy(() => import('./sections/amdocsMobile'))
+const DoobleMobile = lazy(() => import('./sections/doobleMobile'))
+const BannerMobile = lazy(() =>
+  import('./components/mobile/banner/BannerMobile')
 )
-const SecondMobile = lazy(() =>
-  import('./components/mobile/secondScreen/SecondMobile')
+const TimeFeekMobile = lazy(() =>
+  import('./components/mobile/timeFeek/TimeFeekMobile')
 )
-const ThirdMobile = lazy(() =>
-  import('./components/mobile/thirdScreen/ThirdMobile')
+const ZerBayadMobile = lazy(() =>
+  import('./components/mobile/zerBayad/ZerBayadMobile')
 )
-const FourthMobile = lazy(() =>
-  import('./components/mobile/fourthScreen/FourthMobile')
+const FixForYouMobile = lazy(() =>
+  import('./components/mobile/fixForYou/FixForYouMobile')
 )
-const FirstTablet = lazy(() =>
-  import('./components/tablet/firstScreen/FirstTablet')
+
+//imports Tablet
+const BannerTablet = lazy(() =>
+  import('./components/tablet/banner/BannerTablet')
 )
 const TimeFeekTablet = lazy(() =>
   import('./components/tablet/timeFeek/TimeFeekTablet')
@@ -36,10 +43,12 @@ const FixForYouTablet = lazy(() =>
 const Mobile = () => (
   <div className='AppMobile'>
     <Suspense fallback={<SuspenseComp />}>
-      <FirstMobile />
-      <SecondMobile />
-      <ThirdMobile />
-      <FourthMobile />
+      <BannerMobile />
+      <AmdocsMobile />
+      <DoobleMobile />
+      <TimeFeekMobile />
+      <ZerBayadMobile />
+      <FixForYouMobile />
     </Suspense>
   </div>
 )
@@ -60,7 +69,7 @@ const Desktop = () => (
 const Tablet = () => (
   <div className='App'>
     <Suspense fallback={<SuspenseComp />}>
-      <FirstTablet />
+      <BannerTablet />
       <AmdocsScreen />
       <DoobleScreen />
       <TimeFeekTablet />

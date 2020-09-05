@@ -5,24 +5,22 @@ import { Box, Grid, Typography } from '@material-ui/core'
 import { Waypoint } from 'react-waypoint'
 import { animated, useSpring } from 'react-spring'
 
-import TabsComponent from '../../components/tabs/tabComponent/TabsComponent'
 import bg1 from '../../assets/images/bg-1.png'
 import bg2 from '../../assets/images/bg-2.png'
 import lock from '../../assets/images/lock.png'
 import { makeStyles } from '@material-ui/core/styles'
 import vector from '../../assets/images/vector.png'
 import { Dooble } from '../../assets/data/data'
+import TabAccordions from '../../components/accordions'
 
 const useStyle = makeStyles(() => ({
   root: {
     width: '100vw',
-    height: '100vh',
     fontFamily: 'roboto',
     position: 'relative',
-    padding: '50px 15px 0 15px',
-    marginTop: '80px',
-    backgroundColor: '#fefefe',
     overflow: 'hidden',
+    padding: '50px 15px 30px 15px',
+    backgroundColor: '#fefefe',
   },
   bgLeft: {
     width: '36%',
@@ -67,7 +65,7 @@ const useStyle = makeStyles(() => ({
   },
 }))
 
-const DoobleScreen = () => {
+const DoobleMobile = () => {
   const classes = useStyle()
   const [on, toogle] = useState(false)
   const zoom = useSpring({
@@ -111,7 +109,7 @@ const DoobleScreen = () => {
         direction='column'
         alignItems='center'
         wrap='nowrap'
-        style={{ zIndex: '10', height: '420px' }}
+        style={{ zIndex: '10', paddingBottom: '1em' }}
       >
         <h1 className={classes.year}>2019-2020</h1>
         <animated.div className={classes.underline} style={size}>
@@ -125,19 +123,10 @@ const DoobleScreen = () => {
         <Box component='span' m={2} style={{ zIndex: '10', color: '#212121' }}>
           <h2>Under confidentiality agreement (Cyber-Enterprise)</h2>
         </Box>
-        <Grid
-          container
-          item
-          xs={12}
-          sm={10}
-          lg={8}
-          style={{ zIndex: '10', marginTop: '1em' }}
-        >
-          <TabsComponent data={Dooble} />
-        </Grid>
       </Grid>
+      <TabAccordions data={Dooble} />
     </div>
   )
 }
 
-export default DoobleScreen
+export default DoobleMobile
