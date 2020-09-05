@@ -1,7 +1,7 @@
 import 'fontsource-roboto'
 import React, { useState } from 'react'
 
-import { Box, Typography } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import { Waypoint } from 'react-waypoint'
 
@@ -23,14 +23,14 @@ const useStyle = makeStyles(() => ({
     position: 'absolute',
     top: '2%',
     left: '-20px',
-    zIndex: '1',
+    zIndex: 1,
   },
   two: {
     width: '10%',
     position: 'absolute',
     top: '30%',
-    right: '0',
-    zIndex: '1',
+    right: 0,
+    zIndex: 1,
   },
   container: {
     width: '100%',
@@ -78,15 +78,12 @@ const ZerBayadTablet = () => {
       <div className={classes.container}>
         <div className={classes.content}>
           <div className={classes.header}>
-            <Typography variant='h6' style={{ color: '#666', fontSize: '4vw' }}>
+            <Typography variant='h6' style={{ color: '#666' }}>
               ZerBayad
             </Typography>
-            <Box
-              component='span'
-              style={{ zIndex: '10', color: '#212121', fontSize: '4vw' }}
-            >
-              <h2>Entrepreneurship</h2>
-            </Box>
+            <Typography variant='h4' style={{ color: '#212121' }}>
+              Entrepreneurship
+            </Typography>
           </div>
           <div className={classes.stepper}>
             <StepperContent on={on} />
