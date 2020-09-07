@@ -6,7 +6,7 @@ const SocialIcons = () => {
       <a href='https://www.facebook.com/RamiTalisveiber/'>
         <i class='fa fa-facebook'></i>
       </a>
-      <a href='https://www.linkedin.com/rami-talisveiber/'>
+      <a href='https://www.linkedin.com/in/rami-talisveiber/'>
         <i class='fa fa-linkedin'></i>
       </a>
       <a href='https://github.com/tarami6'>
