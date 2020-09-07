@@ -42,16 +42,18 @@ const useStyle = makeStyles((theme) => ({
     position: 'absolute',
     left: '47%',
     top: 0,
-    zIndex: '3',
+    zIndex: 3,
   },
   image2: {
     height: '95%',
     position: 'relative',
     left: '17%',
-    zIndex: '3',
+    zIndex: 3,
   },
   peperContent: {
     height: '47%',
+    position: 'relative',
+    zIndex: 10,
   },
   paper: {
     display: 'flex',
@@ -63,7 +65,7 @@ const useStyle = makeStyles((theme) => ({
     paddingRight: '7%',
     boxSizing: 'border-box',
     background: 'transparent',
-    zIndex: '2',
+    zIndex: 2,
   },
   button: {
     height: '10%',
@@ -132,12 +134,8 @@ const StepperContent = ({ on }) => {
       </div>
       <div className={classes.peperContent}>
         <Paper square elevation={0} className={classes.paper}>
-          <Typography variant='h3'>{stepperItem[activeStep].title}</Typography>
-          <Typography
-            style={{
-              fontSize: '3vw',
-            }}
-          >
+          <Typography variant='h4'>{stepperItem[activeStep].title}</Typography>
+          <Typography variant='body1'>
             {stepperItem[activeStep].text}
           </Typography>
         </Paper>

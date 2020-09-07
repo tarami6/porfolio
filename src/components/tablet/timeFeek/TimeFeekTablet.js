@@ -1,7 +1,7 @@
 import 'fontsource-roboto'
 import React, { useState } from 'react'
 
-import { Box, Typography } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import { Waypoint } from 'react-waypoint'
 
@@ -72,12 +72,12 @@ const TimeFeekTablet = () => {
       </div>
       <div className={classes.content}>
         <div className={classes.header}>
-          <Typography variant='h6' style={{ color: '#666', fontSize: '4vw' }}>
+          <Typography variant='h5' style={{ color: '#666' }}>
             TimeFreek
           </Typography>
-          <Box component='span' style={{ zIndex: '10', color: '#212121', fontSize: '4vw' }}>
-            <h2>Mobile App</h2>
-          </Box>
+          <Typography variant='h4' style={{ color: '#212121' }}>
+            Mobile App
+          </Typography>
         </div>
         <div className={classes.stepper}>
           <StepperContent on={on} />

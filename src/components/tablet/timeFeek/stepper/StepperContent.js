@@ -1,6 +1,7 @@
 import 'fontsource-roboto'
 
-import { Paper, Typography } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography'
+import Paper from '@material-ui/core/Paper'
 import { animated, useSpring } from 'react-spring'
 import React from 'react'
 import image1 from '../../../../assets/images/image-12.png'
@@ -30,16 +31,18 @@ const useStyle = makeStyles((theme) => ({
     position: 'absolute',
     left: '55%',
     top: 0,
-    zIndex: '3',
+    zIndex: 3,
   },
   image2: {
     height: '100%',
     position: 'relative',
     left: '13%',
-    zIndex: '3',
+    zIndex: 3,
   },
   peperContent: {
     height: '45%',
+    position: 'relative',
+    zIndex: 10,
   },
   paper: {
     width: '100%',
@@ -47,8 +50,8 @@ const useStyle = makeStyles((theme) => ({
     padding: '7%',
     boxSizing: 'border-box',
     background: 'transparent',
-    zIndex: '2',
-  }
+    zIndex: 2,
+  },
 }))
 
 const StepperContent = ({ on }) => {
@@ -91,14 +94,8 @@ const StepperContent = ({ on }) => {
       </div>
       <div className={classes.peperContent}>
         <Paper square elevation={0} className={classes.paper}>
-          <Typography variant='h3'>{stepperItem.title}</Typography>
-          <Typography
-            style={{
-              fontSize: '3vw',
-            }}
-          >
-            {stepperItem.text}
-          </Typography>
+          <Typography variant='h4'>{stepperItem.title}</Typography>
+          <Typography variant='body1'>{stepperItem.text}</Typography>
         </Paper>
       </div>
     </div>
