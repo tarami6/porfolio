@@ -93,21 +93,11 @@ const BannerMobile = () => {
         {/* image */}
         <animated.div style={animContent} src={deux} className={classes.block}>
           <animated.div className={classes.text}>
-            <h1 className={classes.h1}>Hi, I'm Rami,</h1>
+            <h1>Hi, I'm Rami</h1>
             <Typical
-              className={classes.span}
-              loop={Infinity}
               wrapper='span'
-              steps={[
-                'UI/UX Designer,',
-                1000,
-                'Web Developer,',
-                1000,
-                'Freelancer,',
-                1000,
-                'Tech Leader.',
-                2000,
-              ]}
+              className={classes.span}
+              steps={['Tech', 3000, 'Leader', 3000, 'Tech Leader']}
             />
           </animated.div>
           <animated.img src={deux} alt='Rami' className={classes.image} />
