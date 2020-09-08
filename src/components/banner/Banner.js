@@ -13,6 +13,7 @@ const useStyle = makeStyles(() => ({
     height: '100vh',
     position: 'relative',
     overflow: 'hidden',
+
   },
   square: {
     width: '50vw',
@@ -56,7 +57,7 @@ const Banner = () => {
   return (
     <div className={classes.root}>
       <div className='container'>
-        <NavBar />
+        <NavBar/>
         <Background />
         <Grid container justify='center'>
           {/* Square */}
@@ -72,8 +73,13 @@ const Banner = () => {
               <h1>Hi, I'm Rami</h1>
               <Typical
                 wrapper='span'
-                className={classes.span}
-                steps={['Tech', 3000, 'Leader', 3000, 'Tech Leader']}
+                steps={[
+                  'Tech',
+                  3000,
+                  'Leader',
+                  3000,
+                  'Tech Leader'
+                ]}
               />
             </animated.div>
             <animated.img src={deux} alt='Rami' className={classes.image} />
